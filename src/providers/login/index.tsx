@@ -8,14 +8,16 @@ interface LoginProps {
   children: ReactNode;
 }
 
-interface LoginContext {
+interface LoginContextData {
   userId: string;
   token: string;
-  signIn: (UserData: UserData) => void;
+  signIn: (userData: UserData) => void;
   logout: () => void
 }
 
-const LoginContext = createContext<LoginContext>({} as LoginContext);
+const LoginContext = createContext<LoginContextData>(
+  {} as LoginContextData
+);
 
 export const LoginProvider = ({ children }: LoginProps) => {
   const history = useHistory();
