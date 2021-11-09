@@ -3,6 +3,7 @@ import { LoginProvider } from "./login/index";
 import { RegisterProvider } from "./register/index";
 import { RestaurantsProvider } from "./restaurants/index";
 import { FavoritesProvider } from "./favorites/index";
+import { ScoreProvider } from "./score/index";
 
 interface ProvidersProps {
   children: ReactNode;
@@ -13,7 +14,9 @@ const Providers = ({ children }: ProvidersProps) => {
     <LoginProvider>
       <RegisterProvider>
         <RestaurantsProvider>
-          <FavoritesProvider>{children}</FavoritesProvider>
+          <FavoritesProvider>
+            <ScoreProvider>{children}</ScoreProvider>
+          </FavoritesProvider>
         </RestaurantsProvider>
       </RegisterProvider>
     </LoginProvider>

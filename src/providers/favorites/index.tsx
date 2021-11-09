@@ -80,9 +80,7 @@ export const FavoritesProvider = ({ children }: FavoritesProps) => {
       });
   };
 
-  useEffect(() => {
-    getFavorites();
-  }, []);
+  useEffect(() => getFavorites(), []);
 
   return (
     <FavoritesContext.Provider
