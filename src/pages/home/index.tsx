@@ -1,5 +1,31 @@
+import { useHistory } from "react-router";
+import { Container, DivButton } from "./style";
+
 const Home = () => {
-  return <></>;
+  const history = useHistory();
+  return (
+    <Container>
+      <h1>Hungry Traveler</h1>
+      <p>O jeito mais fácil de pedir delivery de comida e fazer mercado</p>
+      <button
+        onClick={() => {
+          history.push("/login");
+        }}
+      >
+        Entrar
+      </button>
+      <p>ou</p>
+      <DivButton>
+        <button
+          onClick={() => {
+            history.push("/register");
+          }}
+        >
+          Registrar-se
+        </button>
+      </DivButton>
+    </Container>
+  );
 };
 
 export default Home;
