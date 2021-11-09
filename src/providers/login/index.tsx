@@ -23,7 +23,6 @@ export const LoginProvider = ({ children }: LoginProps) => {
   const [userId, setUserId] = useState(
     () => localStorage.getItem("@hungryTraveler:userId") || ""
   );
-
   const [token, setToken] = useState(
     () => localStorage.getItem("@hungryTraveler:token") || ""
   );
