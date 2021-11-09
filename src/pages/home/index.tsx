@@ -7,15 +7,15 @@ const Home = () => {
     <Container>
       <h1>Hungry Traveler</h1>
       <p>O jeito mais fácil de pedir delivery de comida e fazer mercado</p>
-      <button
-        onClick={() => {
-          history.push("/login");
-        }}
-      >
-        Entrar
-      </button>
-      <p>ou</p>
       <DivButton>
+        <button
+          onClick={() => {
+            history.push("/login");
+          }}
+        >
+          Entrar
+        </button>
+        <p>ou</p>
         <button
           onClick={() => {
             history.push("/register");
