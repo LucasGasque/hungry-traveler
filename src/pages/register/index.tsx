@@ -20,9 +20,9 @@ const Register = () => {
       <form onSubmit={handleSubmit(registerUser)}>
         <TextField
           label="Nome"
-          {...register("username")}
-          error={!!errors.username}
-          helperText={errors.username?.message}
+          {...register("name")}
+          error={!!errors.name}
+          helperText={errors.name?.message}
         />
         <TextField
           label="E-mail"

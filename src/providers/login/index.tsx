@@ -11,31 +11,43 @@ interface LoginProps {
 interface LoginContextData {
   userId: string;
   token: string;
+  userName: string;
   signIn: (userData: UserData) => void;
-  logout: () => void
+  logout: () => void;
 }
 
-const LoginContext = createContext<LoginContextData>(
-  {} as LoginContextData
-);
+const LoginContext = createContext<LoginContextData>({} as LoginContextData);
 
 export const LoginProvider = ({ children }: LoginProps) => {
   const history = useHistory();
   const [userId, setUserId] = useState(
-    () => localStorage.getItem("userId") || ""
+    () => localStorage.getItem("@hungryTraveler:userId") || ""
   );
 
-  const [token, setToken] = useState(() => localStorage.getItem("token") || "");
+  const [token, setToken] = useState(
+    () => localStorage.getItem("@hungryTraveler:token") || ""
+  );
+  const [userName, setUserName] = useState(
+    () => localStorage.getItem("@hungryTraveler:userName") || ""
+  );
 
   const signIn = (userData: UserData) => {
     api
       .post("/login", userData)
       .then((response) => {
         toast.success(`Bem vindo ${response.data.user.name}`);
-        localStorage.setItem("token", response.data.accessToken);
-        localStorage.setItem("userId", response.data.user.id);
+        localStorage.setItem(
+          "@hungryTraveler:token",
+          response.data.accessToken
+        );
+        localStorage.setItem("@hungryTraveler:userId", response.data.user.id);
+        localStorage.setItem(
+          "@hungryTraveler:userName",
+          response.data.user.name
+        );
         setToken(response.data.accessToken);
         setUserId(response.data.user.id);
+        setUserName(response.data.user.name);
         history.push("");
       })
       .then((err) => {
@@ -45,14 +57,15 @@ export const LoginProvider = ({ children }: LoginProps) => {
   };
 
   const logout = () => {
-      localStorage.clear()
-      setToken('')
-      setUserId('')
-      history.push('/login')
-  }
+    localStorage.clear();
+    setToken("");
+    setUserId("");
+    setUserName("");
+    history.push("/login");
+  };
 
   return (
-    <LoginContext.Provider value={{ token, userId, signIn, logout }}>
+    <LoginContext.Provider value={{ token, userId, userName, signIn, logout }}>
       {children}
     </LoginContext.Provider>
   );
