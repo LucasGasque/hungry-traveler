@@ -3,7 +3,7 @@ import * as yup from "yup";
 const regex = new RegExp("^(?=.*[a-z])(?=.*[0-9])(?=.{6,})");
 
 export const schema = yup.object().shape({
-  username: yup.string().required("Campo obrigatório"),
+  name: yup.string().required("Campo obrigatório"),
   email: yup.string().required("Campo obrigatório").email("Formato inválido"),
   emailConfirm: yup
     .string()

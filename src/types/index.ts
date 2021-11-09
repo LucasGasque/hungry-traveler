@@ -1,7 +1,7 @@
 export interface UserData {
   email: string;
   password: string;
-  username?: string;
+  name?: string;
   emailConfirm?: string;
   passwordConfirm?: string;
 }
