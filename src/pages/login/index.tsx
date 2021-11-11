@@ -3,9 +3,10 @@ import { schema } from "../../validations/LoginSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { TextField, Button } from "@mui/material";
 import { useHistory } from "react-router";
-import { Container } from "./style";
+import { Container, Form } from "./style";
 import { UserData } from "../../types/index";
 import { useLogin } from "../../providers/login";
+import { FormTitle, Title } from "../register/style";
 
 const Login = () => {
   const { signIn } = useLogin();
@@ -18,23 +19,64 @@ const Login = () => {
 
   return (
     <Container>
-      <form onSubmit={handleSubmit(signIn)}>
+      <Title>Hungry Traveler</Title>
+      <Form onSubmit={handleSubmit(signIn)}>
+        <FormTitle>Login</FormTitle>
         <TextField
+          color="info"
+          sx={{
+            width: "100%",
+            height: "45px",
+            backgroundColor: "#F5F5F5",
+            borderRadius: "8px",
+          }}
           label="E-mail"
           {...register("email")}
           error={!!errors.email}
           helperText={errors.email?.message}
         />
         <TextField
+          color="info"
+          sx={{
+            width: "100%",
+            height: "45px",
+            backgroundColor: "#F5F5F5",
+            borderRadius: "8px",
+          }}
           label="Senha"
           {...register("password")}
           error={!!errors.password}
           helperText={errors.password?.message}
         />
-        <Button variant="contained" type="submit">
+        <Button
+          color="primary"
+          variant="contained"
+          sx={{
+            width: "100%",
+            height: "45px",
+            padding: "0",
+            textTransform: "none",
+            fontFamily: "Righteous, cursive",
+            borderRadius: "8px",
+            backgroundColor: "#F5F5F5",
+            color: "#E0E0E0",
+          }}
+          type="submit"
+        >
           Entrar
         </Button>
-      </form>
+        <p>
+          Ainda não tem uma conta?
+          <span
+            onClick={() => {
+              history.push("/login");
+            }}
+          >
+            {" "}
+            Cadastre-se
+          </span>
+        </p>
+      </Form>
     </Container>
   );
 };
