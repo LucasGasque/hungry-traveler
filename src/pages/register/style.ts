@@ -1,12 +1,22 @@
 import styled from "styled-components";
+import traveler from "../../assets/img/traveler.png";
 
 export const Container = styled.div`
-  height: 100vh;
+  height: auto;
+  background-image: linear-gradient(
+      270.31deg,
+      rgba(0, 0, 0, 0.6) 0.28%,
+      rgba(0, 0, 0, 0.15) 49.5%,
+      rgba(0, 0, 0, 0.6) 99.75%
+    ),
+    url(${traveler});
+  background-size: 100% 100%;
+  color: var(--gray-0);
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column;
   align-items: center;
-  grid-gap: 1rem;
+  padding-bottom: 20px;
 
   p {
     color: var(--gray-100);
@@ -17,7 +27,25 @@ export const Container = styled.div`
   }
 `;
 
+export const Title = styled.h1`
+  margin-top: 20px;
+  padding: 40px 0;
+  font-family: "Acme", sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+`;
+
+export const FormTitle = styled.h1`
+  color: var(--primary);
+  font-family: "Righteous", cursive;
+  margin-top: 1rem;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+`;
+
 export const Form = styled.form`
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,12 +57,18 @@ export const Form = styled.form`
   border-radius: 5px;
   box-sizing: border-box;
 
-  h1 {
-    color: var(--primary);
-    margin-top: 1rem;
-    font-size: 22px;
-    font-weight: bold;
+  .css-hgkgee-MuiInputBase-root-MuiOutlinedInput-root {
+    height: 45px;
+    vertical-align: middle;
+  }
+
+  .css-xewhx1-MuiFormLabel-root-MuiInputLabel-root {
+    font-family: "Righteous", cursive;
+    font-size: 14px;
+    color: var(--gray-50);
+  }
+
+  .css-xewhx1-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+    color: #000000;
   }
 `;
-
-// export const StyledTextField = styled(TextField)``;

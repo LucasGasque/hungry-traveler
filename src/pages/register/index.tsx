@@ -1,4 +1,4 @@
-import { Container, Form } from "./style";
+import { Container, Form, FormTitle, Title } from "./style";
 import { Button, TextField } from "@mui/material";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
@@ -17,9 +17,16 @@ const Register = () => {
   const history = useHistory();
   return (
     <Container>
+      <Title>Hungry Traveler</Title>
       <Form onSubmit={handleSubmit(registerUser)}>
-        <h1>Cadastro</h1>
+        <FormTitle>Cadastro</FormTitle>
         <TextField
+          sx={{
+            width: "100%",
+            height: "45px",
+            backgroundColor: "#F5F5F5",
+            borderRadius: "8px",
+          }}
           size="small"
           variant="outlined"
           color="info"
@@ -29,6 +36,12 @@ const Register = () => {
           helperText={errors.username?.message}
         />
         <TextField
+          sx={{
+            width: "100%",
+            height: "45px",
+            backgroundColor: "#F5F5F5",
+            borderRadius: "8px",
+          }}
           size="small"
           variant="outlined"
           color="info"
@@ -38,6 +51,12 @@ const Register = () => {
           helperText={errors.email?.message}
         />
         <TextField
+          sx={{
+            width: "100%",
+            height: "45px",
+            backgroundColor: "#F5F5F5",
+            borderRadius: "8px",
+          }}
           size="small"
           variant="outlined"
           color="info"
@@ -47,6 +66,12 @@ const Register = () => {
           helperText={errors.emailConfirm?.message}
         />
         <TextField
+          sx={{
+            width: "100%",
+            height: "45px",
+            backgroundColor: "#F5F5F5",
+            borderRadius: "8px",
+          }}
           size="small"
           variant="outlined"
           color="info"
@@ -56,6 +81,12 @@ const Register = () => {
           helperText={errors.password?.message}
         />
         <TextField
+          sx={{
+            width: "100%",
+            height: "45px",
+            backgroundColor: "#F5F5F5",
+            borderRadius: "8px",
+          }}
           size="small"
           variant="outlined"
           color="info"
@@ -65,15 +96,21 @@ const Register = () => {
           helperText={errors.passwordConfirm?.message}
         />
         <Button
-          color="primary"
+          color="secondary"
           variant="contained"
           sx={{
             width: "100%",
-            height: "40px",
+            height: "45px",
+            padding: "0",
+            textTransform: "none",
+            fontFamily: "Righteous, cursive",
+            borderRadius: "8px",
+            backgroundColor: "#F5F5F5",
+            color: "#E0E0E0",
           }}
           type="submit"
         >
-          Registrar
+          Cadastrar
         </Button>
         <p>
           Já tem uma conta?

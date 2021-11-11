@@ -8,5 +8,8 @@ export const muiTheme = createTheme({
       dark: "#fff",
       contrastText: "#fff",
     },
+    secondary: {
+      main: "#E0E0E0",
+    },
   },
 });
