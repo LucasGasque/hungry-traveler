@@ -49,7 +49,7 @@ export const LoginProvider = ({ children }: LoginProps) => {
         setUserName(response.data.user.name);
         history.push("");
       })
-      .then((err) => {
+      .catch((err) => {
         console.log(err);
         toast.error("Senha ou email incorreto");
       });

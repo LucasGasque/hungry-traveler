@@ -27,6 +27,12 @@ export const Container = styled.div`
   span {
     color: var(--primary);
   }
+
+  .css-k4qjio-MuiFormHelperText-root.Mui-error {
+    font-size: 10px;
+    margin: 0;
+    margin-left: 2px;
+  }
 `;
 
 export const Title = styled.h1`

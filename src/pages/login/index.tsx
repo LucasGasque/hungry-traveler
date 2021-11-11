@@ -43,6 +43,7 @@ const Login = () => {
             backgroundColor: "#F5F5F5",
             borderRadius: "8px",
           }}
+          type="password"
           label="Senha"
           {...register("password")}
           error={!!errors.password}

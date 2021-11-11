@@ -72,6 +72,7 @@ const Register = () => {
             backgroundColor: "#F5F5F5",
             borderRadius: "8px",
           }}
+          type="password"
           size="small"
           variant="outlined"
           color="info"
@@ -87,6 +88,7 @@ const Register = () => {
             backgroundColor: "#F5F5F5",
             borderRadius: "8px",
           }}
+          type="password"
           size="small"
           variant="outlined"
           color="info"
