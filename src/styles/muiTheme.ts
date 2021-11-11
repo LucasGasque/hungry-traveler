@@ -11,5 +11,8 @@ export const muiTheme = createTheme({
     secondary: {
       main: "#E0E0E0",
     },
+    info: {
+      main: "#000",
+    },
   },
 });

@@ -20,6 +20,8 @@ export const Container = styled.div`
 
   p {
     color: var(--gray-100);
+    font-size: 12px;
+    font-family: "Righteous", cursive;
   }
 
   span {
@@ -68,7 +70,7 @@ export const Form = styled.form`
     color: var(--gray-50);
   }
 
-  .css-xewhx1-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
-    color: #000000;
+  .css-1vy6t9p-MuiInputBase-root-MuiOutlinedInput-root {
+    height: 45px;
   }
 `;
