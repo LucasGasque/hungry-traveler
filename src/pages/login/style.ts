@@ -19,7 +19,7 @@ export const Container = styled.div`
   padding-bottom: 20px;
 
   p {
-    color: var(--gray-100);
+    color: var(--gray-50);
     font-size: 12px;
     font-family: "Righteous", cursive;
   }
@@ -30,6 +30,7 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
+  background: rgba(0, 0, 0, 0.5);
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -37,8 +38,6 @@ export const Form = styled.form`
   grid-gap: 1rem;
   padding: 20px;
   padding-top: 0;
-  background: #fcfcfc;
-  border: 3px solid #f5f5f5;
   border-radius: 5px;
   box-sizing: border-box;
 

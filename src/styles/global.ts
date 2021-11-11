@@ -8,8 +8,6 @@ export default createGlobalStyle`
         --gray-50: #828282;
         --gray-20: #E0E0E0;
         --gray-0: #F5F5F5;
-        
-        
     }
     *{
     margin: 0;
