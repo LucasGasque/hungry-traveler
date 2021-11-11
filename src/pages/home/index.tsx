@@ -1,28 +1,51 @@
 import { useHistory } from "react-router";
-import { Container, DivButton } from "./style";
+import { Container, DivButton, Phrase, Title } from "./style";
+import { Button } from "@mui/material";
 
 const Home = () => {
   const history = useHistory();
   return (
     <Container>
-      <h1>Hungry Traveler</h1>
-      <p>O jeito mais fácil de pedir delivery de comida e fazer mercado</p>
+      <Title>Hungry Traveler</Title>
+      <Phrase>
+        O jeito mais fácil de pedir delivery de comida e fazer mercado
+      </Phrase>
       <DivButton>
-        <button
+        <Button
+          color="primary"
+          variant="contained"
+          sx={{
+            width: "100%",
+            height: "45px",
+            padding: "0",
+            textTransform: "none",
+            fontFamily: "Righteous, cursive",
+            borderRadius: "8px",
+          }}
           onClick={() => {
             history.push("/login");
           }}
         >
           Entrar
-        </button>
+        </Button>
         <p>ou</p>
-        <button
+        <Button
+          color="secondary"
+          variant="contained"
+          sx={{
+            width: "100%",
+            height: "45px",
+            padding: "0",
+            textTransform: "none",
+            fontFamily: "Righteous, cursive",
+            borderRadius: "8px",
+          }}
           onClick={() => {
             history.push("/register");
           }}
         >
           Registrar-se
-        </button>
+        </Button>
       </DivButton>
     </Container>
   );
