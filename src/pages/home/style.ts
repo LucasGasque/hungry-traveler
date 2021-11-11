@@ -2,13 +2,13 @@ import styled from "styled-components";
 import traveler from "../../assets/img/traveler.png";
 
 export const Container = styled.div`
-  background: url(${traveler}) no-repeat left top,
-    linear-gradient(
+  background-image: linear-gradient(
       270.31deg,
       rgba(0, 0, 0, 0.6) 0.28%,
       rgba(0, 0, 0, 0.15) 49.5%,
       rgba(0, 0, 0, 0.6) 99.75%
-    );
+    ),
+    url(${traveler});
   background-size: 100% 100%;
   color: var(--gray-0);
   height: 100vh;
