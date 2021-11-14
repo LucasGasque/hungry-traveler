@@ -2,7 +2,7 @@ import styled from "styled-components";
 import traveler from "../../assets/img/traveler.png";
 
 export const Container = styled.div`
-  height: auto;
+  height: 100vh;
   background-image: linear-gradient(
       270.31deg,
       rgba(0, 0, 0, 0.6) 0.28%,
@@ -33,6 +33,18 @@ export const Container = styled.div`
     margin: 0;
     margin-left: 2px;
   }
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
+    background-image: linear-gradient(
+        rgba(12, 12, 12, 0.85),
+        rgba(12, 12, 12, 0.85),
+        rgba(12, 12, 12, 0.85),
+        rgba(12, 12, 12, 0.85)
+      ),
+      url(${traveler});
+    padding-bottom: 0;
+  }
 `;
 
 export const Title = styled.h1`
@@ -41,6 +53,10 @@ export const Title = styled.h1`
   font-family: "Acme", sans-serif;
   font-size: 30px;
   letter-spacing: 2px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const FormTitle = styled.h1`
@@ -50,10 +66,15 @@ export const FormTitle = styled.h1`
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 1px;
+
+  @media (min-width: 768px) {
+    color: #ffffff;
+  }
 `;
 
 export const Form = styled.form`
   width: 90%;
+  max-width: 460px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -78,5 +99,13 @@ export const Form = styled.form`
 
   .css-1vy6t9p-MuiInputBase-root-MuiOutlinedInput-root {
     height: 45px;
+  }
+
+  @media (min-width: 768px) {
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    margin: auto auto;
+    border-radius: 10px;
+    padding: 1rem 3rem;
   }
 `;

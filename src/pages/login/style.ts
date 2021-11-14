@@ -27,10 +27,37 @@ export const Container = styled.div`
   span {
     color: var(--primary);
   }
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
+    background-image: linear-gradient(
+        rgba(12, 12, 12, 0.85),
+        rgba(12, 12, 12, 0.85),
+        rgba(12, 12, 12, 0.85),
+        rgba(12, 12, 12, 0.85)
+      ),
+      url(${traveler});
+  }
+`;
+
+export const Title = styled.h1`
+  font-family: "Acme", sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: var(--gray-0);
+
+  span {
+    color: var(--primary);
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const Form = styled.form`
   width: 90%;
+  max-width: 460px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -55,5 +82,12 @@ export const Form = styled.form`
 
   .css-1vy6t9p-MuiInputBase-root-MuiOutlinedInput-root {
     height: 45px;
+  }
+
+  @media (min-width: 768px) {
+    background: rgba(0, 0, 0, 0.6);
+    border: none;
+    margin: auto auto;
+    border-radius: 10px;
   }
 `;
