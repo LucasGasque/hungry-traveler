@@ -25,7 +25,6 @@ const Home = () => {
           Registrar-se
         </button>
       </DivButton>
-      <Map />
     </Container>
   );
 };
