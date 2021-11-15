@@ -1,4 +1,5 @@
 import { useHistory } from "react-router";
+import Map from "../../components/map";
 import {
   Container,
   DivButton,
@@ -8,6 +9,7 @@ import {
 } from "./style";
 import { Button } from "@mui/material";
 import NavBar from "../../components/navbar";
+
 
 const Home = () => {
   const history = useHistory();

@@ -6,6 +6,8 @@ export interface UserData {
   passwordConfirm?: string;
 }
 
+
+
 export interface RestaurantsData {
   name: string;
   type: string;
