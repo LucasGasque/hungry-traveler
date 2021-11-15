@@ -6,6 +6,7 @@ import { useRegister } from "../../providers/register";
 import { UserData } from "../../types";
 import { schema } from "../../validations/RegisterSchema";
 import { useHistory } from "react-router";
+import NavBar from "../../components/navbar";
 
 const Register = () => {
   const { registerUser } = useRegister();
@@ -17,6 +18,7 @@ const Register = () => {
   const history = useHistory();
   return (
     <Container>
+      <NavBar />
       <Title>Hungry Traveler</Title>
       <Form onSubmit={handleSubmit(registerUser)}>
         <FormTitle>Cadastro</FormTitle>

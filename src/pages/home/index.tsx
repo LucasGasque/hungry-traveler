@@ -1,29 +1,65 @@
 import { useHistory } from "react-router";
-import { Container, DivButton } from "./style";
 import Map from "../../components/map";
+import {
+  Container,
+  DivButton,
+  PhraseMobile,
+  PhraseDesktop,
+  Title,
+} from "./style";
+import { Button } from "@mui/material";
+import NavBar from "../../components/navbar";
+
 
 const Home = () => {
   const history = useHistory();
   return (
     <Container>
-      <h1>Hungry Traveler</h1>
-      <p>O jeito mais fácil de pedir delivery de comida e fazer mercado</p>
+      <NavBar />
+      <Title>Hungry Traveler</Title>
+      <PhraseMobile>
+        O jeito mais fácil de pedir delivery de comida e fazer mercado
+      </PhraseMobile>
       <DivButton>
-        <button
+        <h1>Escolha pelo caminho mais rápido</h1> <br />
+        <PhraseDesktop>
+          O jeito mais fácil de pedir delivery de comida e fazer mercado
+        </PhraseDesktop>
+        <Button
+          color="primary"
+          variant="contained"
+          sx={{
+            width: "100%",
+            height: "45px",
+            padding: "0",
+            textTransform: "none",
+            fontFamily: "Righteous, cursive",
+            borderRadius: "8px",
+          }}
           onClick={() => {
             history.push("/login");
           }}
         >
           Entrar
-        </button>
+        </Button>
         <p>ou</p>
-        <button
+        <Button
+          color="secondary"
+          variant="contained"
+          sx={{
+            width: "100%",
+            height: "45px",
+            padding: "0",
+            textTransform: "none",
+            fontFamily: "Righteous, cursive",
+            borderRadius: "8px",
+          }}
           onClick={() => {
             history.push("/register");
           }}
         >
           Registrar-se
-        </button>
+        </Button>
       </DivButton>
     </Container>
   );

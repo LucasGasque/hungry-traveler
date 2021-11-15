@@ -3,10 +3,11 @@ import { schema } from "../../validations/LoginSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { TextField, Button } from "@mui/material";
 import { useHistory } from "react-router";
-import { Container, Form } from "./style";
+import { Container, Form, Title } from "./style";
 import { UserData } from "../../types/index";
 import { useLogin } from "../../providers/login";
-import { FormTitle, Title } from "../register/style";
+import { FormTitle } from "../register/style";
+import NavBar from "../../components/navbar";
 
 const Login = () => {
   const { signIn } = useLogin();
@@ -19,6 +20,7 @@ const Login = () => {
 
   return (
     <Container>
+      <NavBar />
       <Title>Hungry Traveler</Title>
       <Form onSubmit={handleSubmit(signIn)}>
         <FormTitle>Login</FormTitle>
