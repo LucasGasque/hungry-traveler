@@ -1,5 +1,6 @@
 import { useHistory } from "react-router";
 import { Container, DivButton } from "./style";
+import Map from "../../components/map";
 
 const Home = () => {
   const history = useHistory();
@@ -24,6 +25,7 @@ const Home = () => {
           Registrar-se
         </button>
       </DivButton>
+      <Map />
     </Container>
   );
 };

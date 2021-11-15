@@ -13,15 +13,9 @@ export interface RestaurantsData{
   address: string
   city: string
   img: string
-  menu: MenuData
+  menu: DishesData[]
   businessHours: number
   id: number
-}
-
-export interface MenuData{
-  entry: DishesData[]
-  main: DishesData[]
-  desert: DishesData[]
 }
 
 export interface DishesData{
@@ -32,8 +26,8 @@ export interface DishesData{
 }
 
 export interface LocationData{
+  lat: number
   lng: number
-  ltd: number
 }
 
 export interface ScoreData{
