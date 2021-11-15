@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import travelerS from "../../assets/img/travelerS.png";
 import traveler from "../../assets/img/traveler.png";
 
 export const Container = styled.div`
@@ -8,7 +9,7 @@ export const Container = styled.div`
       rgba(0, 0, 0, 0.15) 49.5%,
       rgba(0, 0, 0, 0.6) 99.75%
     ),
-    url(${traveler});
+    url(${travelerS});
   background-size: 100% 100%;
   color: var(--gray-0);
   height: 100vh;

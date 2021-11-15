@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import travelerS from "../../assets/img/travelerS.png";
 import traveler from "../../assets/img/traveler.png";
 
 export const Container = styled.div`
@@ -9,7 +10,7 @@ export const Container = styled.div`
       rgba(0, 0, 0, 0.15) 49.5%,
       rgba(0, 0, 0, 0.6) 99.75%
     ),
-    url(${traveler});
+    url(${travelerS});
   background-size: 100% 100%;
   color: var(--gray-0);
   display: flex;
@@ -56,7 +57,7 @@ export const Title = styled.h1`
 `;
 
 export const Form = styled.form`
-  width: 90%;
+  width: 80%;
   max-width: 460px;
   display: flex;
   flex-direction: column;
@@ -64,8 +65,7 @@ export const Form = styled.form`
   grid-gap: 1rem;
   padding: 20px;
   padding-top: 0;
-  background: #fcfcfc;
-  border: 3px solid #f5f5f5;
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 5px;
   box-sizing: border-box;
 
@@ -95,5 +95,6 @@ export const Form = styled.form`
     border: none;
     margin: auto auto;
     border-radius: 10px;
+    padding: 2rem 4rem;
   }
 `;
