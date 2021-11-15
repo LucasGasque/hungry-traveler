@@ -1,16 +1,28 @@
 import { useHistory } from "react-router";
-import { Container, DivButton, Phrase, Title } from "./style";
+import {
+  Container,
+  DivButton,
+  PhraseMobile,
+  PhraseDesktop,
+  Title,
+} from "./style";
 import { Button } from "@mui/material";
+import NavBar from "../../components/navbar";
 
 const Home = () => {
   const history = useHistory();
   return (
     <Container>
+      <NavBar />
       <Title>Hungry Traveler</Title>
-      <Phrase>
+      <PhraseMobile>
         O jeito mais fácil de pedir delivery de comida e fazer mercado
-      </Phrase>
+      </PhraseMobile>
       <DivButton>
+        <h1>Escolha pelo caminho mais rápido</h1> <br />
+        <PhraseDesktop>
+          O jeito mais fácil de pedir delivery de comida e fazer mercado
+        </PhraseDesktop>
         <Button
           color="primary"
           variant="contained"

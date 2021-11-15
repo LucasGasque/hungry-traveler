@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import travelerS from "../../assets/img/travelerS.png";
 import traveler from "../../assets/img/traveler.png";
 
 export const Container = styled.div`
@@ -8,7 +9,7 @@ export const Container = styled.div`
       rgba(0, 0, 0, 0.15) 49.5%,
       rgba(0, 0, 0, 0.6) 99.75%
     ),
-    url(${traveler});
+    url(${travelerS});
   background-size: 100% 100%;
   color: var(--gray-0);
   height: 100vh;
@@ -16,25 +17,62 @@ export const Container = styled.div`
   justify-content: space-around;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
+    background-image: linear-gradient(
+        rgba(12, 12, 12, 0.85),
+        rgba(12, 12, 12, 0.85),
+        rgba(12, 12, 12, 0.85),
+        rgba(12, 12, 12, 0.85)
+      ),
+      url(${traveler});
+  }
 `;
 
 export const Title = styled.h1`
-  margin-top: 20px;
   font-family: "Acme", sans-serif;
   font-size: 30px;
   letter-spacing: 2px;
+  color: var(--gray-0);
+
+  span {
+    color: var(--primary);
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
-export const Phrase = styled.p`
+export const PhraseMobile = styled.p`
   margin: 5px 0;
   margin-top: 20px;
   font-family: "Righteous", cursive;
   font-size: 16px;
   text-align: center;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const PhraseDesktop = styled.p`
+  margin: 5px 0;
+  margin-top: 20px;
+  font-family: "Righteous", cursive;
+  font-size: 16px;
+  text-align: center;
+  display: none;
+
+  @media (min-width: 768px) {
+    display: inline;
+  }
 `;
 
 export const DivButton = styled.div`
-  width: 100%;
+  width: 90%;
+  max-width: 320px;
   padding: 0 20px;
 
   p {
@@ -42,5 +80,27 @@ export const DivButton = styled.div`
     font-family: "Righteous", cursive;
     font-size: 16px;
     text-align: center;
+  }
+
+  h1 {
+    font-size: 26px;
+    text-align: center;
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    background: rgba(0, 0, 0, 0.6);
+    max-width: 465px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 1rem;
+    margin: auto auto;
+    padding: 4rem 3rem;
+    border-radius: 10px;
+
+    h1 {
+      display: inline;
+    }
   }
 `;

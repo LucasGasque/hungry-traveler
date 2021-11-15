@@ -47,7 +47,7 @@ export const LoginProvider = ({ children }: LoginProps) => {
         setToken(response.data.accessToken);
         setUserId(response.data.user.id);
         setUserName(response.data.user.name);
-        history.push("");
+        history.push("/dashboard");
       })
       .catch((err) => {
         console.log(err);

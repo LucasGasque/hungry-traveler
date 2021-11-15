@@ -14,8 +14,13 @@ export interface RestaurantsData {
   city: string;
   img: string;
   menu: DishesData[];
-  businessHours: number;
+  businessHours: BusinessHoursData;
   id: number;
+}
+
+export interface BusinessHoursData {
+  open: number;
+  close: number;
 }
 
 export interface DishesData {
