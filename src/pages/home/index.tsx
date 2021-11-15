@@ -8,21 +8,12 @@ import {
 } from "./style";
 import { Button } from "@mui/material";
 import NavBar from "../../components/navbar";
-import { FaHome, FaUser } from "react-icons/fa";
-import { MdAssignment } from "react-icons/md";
 
 const Home = () => {
   const history = useHistory();
   return (
     <Container>
-      <NavBar
-        icon1={FaHome}
-        icon2={FaUser}
-        icon3={MdAssignment}
-        text1="Home"
-        text2="Login"
-        text3="Cadastro"
-      />
+      <NavBar />
       <Title>Hungry Traveler</Title>
       <PhraseMobile>
         O jeito mais fácil de pedir delivery de comida e fazer mercado

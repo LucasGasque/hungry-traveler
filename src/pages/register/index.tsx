@@ -6,8 +6,6 @@ import { useRegister } from "../../providers/register";
 import { UserData } from "../../types";
 import { schema } from "../../validations/RegisterSchema";
 import { useHistory } from "react-router";
-import { FaHome, FaUser } from "react-icons/fa";
-import { MdAssignment } from "react-icons/md";
 import NavBar from "../../components/navbar";
 
 const Register = () => {
@@ -20,14 +18,7 @@ const Register = () => {
   const history = useHistory();
   return (
     <Container>
-      <NavBar
-        icon1={FaHome}
-        icon2={FaUser}
-        icon3={MdAssignment}
-        text1="Home"
-        text2="Login"
-        text3="Cadastro"
-      />
+      <NavBar />
       <Title>Hungry Traveler</Title>
       <Form onSubmit={handleSubmit(registerUser)}>
         <FormTitle>Cadastro</FormTitle>

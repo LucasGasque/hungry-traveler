@@ -12,7 +12,6 @@ interface LoginContextData {
   userId: string;
   token: string;
   userName: string;
-  isLogged: boolean;
   signIn: (userData: UserData) => void;
   logout: () => void;
 }
@@ -30,7 +29,6 @@ export const LoginProvider = ({ children }: LoginProps) => {
   const [userName, setUserName] = useState(
     () => localStorage.getItem("@hungryTraveler:userName") || ""
   );
-  const [isLogged, setIsLogged] = useState(false);
 
   const signIn = (userData: UserData) => {
     api
@@ -49,7 +47,6 @@ export const LoginProvider = ({ children }: LoginProps) => {
         setToken(response.data.accessToken);
         setUserId(response.data.user.id);
         setUserName(response.data.user.name);
-        setIsLogged(true);
         history.push("/dashboard");
       })
       .catch((err) => {
@@ -63,14 +60,11 @@ export const LoginProvider = ({ children }: LoginProps) => {
     setToken("");
     setUserId("");
     setUserName("");
-    setIsLogged(false);
     history.push("/login");
   };
 
   return (
-    <LoginContext.Provider
-      value={{ token, userId, userName, isLogged, signIn, logout }}
-    >
+    <LoginContext.Provider value={{ token, userId, userName, signIn, logout }}>
       {children}
     </LoginContext.Provider>
   );

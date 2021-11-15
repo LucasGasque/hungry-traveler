@@ -84,6 +84,12 @@ export const Form = styled.form`
     height: 45px;
   }
 
+  .css-jxzsrg-MuiFormLabel-root-MuiInputLabel-root {
+    background: #fff;
+    padding: 0 10px;
+    border-radius: 10px;
+  }
+
   @media (min-width: 768px) {
     background: rgba(0, 0, 0, 0.6);
     border: none;

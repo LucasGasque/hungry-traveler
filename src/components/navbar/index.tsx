@@ -1,26 +1,13 @@
 import { useLogin } from "../../providers/login";
 import { useHistory } from "react-router";
 import { ButtonsDiv, Header, Title } from "./style";
-import { IconType } from "react-icons";
+import { FaHome, FaUser } from "react-icons/fa";
+import { MdAssignment } from "react-icons/md";
+import { FaMapMarkerAlt, FaHeart } from "react-icons/fa";
+import { IoMdExit } from "react-icons/io";
 
-interface NavBarData {
-  icon1: IconType;
-  icon2: IconType;
-  icon3: IconType;
-  text1: string;
-  text2: string;
-  text3: string;
-}
-
-const NavBar = ({
-  icon1: Icon1,
-  icon2: Icon2,
-  icon3: Icon3,
-  text1,
-  text2,
-  text3,
-}: NavBarData) => {
-  const { logout } = useLogin();
+const NavBar = () => {
+  const { logout, token } = useLogin();
   const history = useHistory();
 
   const colored: any = {
@@ -44,25 +31,49 @@ const NavBar = ({
   };
 
   return (
-    <Header>
-      <Title>
-        <span>Hungry</span> Traveler
-      </Title>
-      <ButtonsDiv num={colored[history.location.pathname]}>
-        <button onClick={() => dashboardFunc()}>
-          {Icon1 && <Icon1 />}
-          {text1}
-        </button>
-        <button onClick={() => favoritesFunc()}>
-          {Icon2 && <Icon2 />}
-          {text2}
-        </button>
-        <button onClick={() => logoutFunc()}>
-          {Icon3 && <Icon3 />}
-          {text3}
-        </button>
-      </ButtonsDiv>
-    </Header>
+    <>
+      {token ? (
+        <Header>
+          <Title>
+            <span>Hungry</span> Traveler
+          </Title>
+          <ButtonsDiv num={colored[history.location.pathname]}>
+            <button onClick={() => dashboardFunc()}>
+              <FaMapMarkerAlt />
+              Mapa
+            </button>
+            <button onClick={() => favoritesFunc()}>
+              <FaHeart />
+              Favoritos
+            </button>
+            <button onClick={() => logoutFunc()}>
+              <IoMdExit />
+              Sair
+            </button>
+          </ButtonsDiv>
+        </Header>
+      ) : (
+        <Header>
+          <Title>
+            <span>Hungry</span> Traveler
+          </Title>
+          <ButtonsDiv num={colored[history.location.pathname]}>
+            <button onClick={() => dashboardFunc()}>
+              <FaHome />
+              Home
+            </button>
+            <button onClick={() => favoritesFunc()}>
+              <FaUser />
+              Login
+            </button>
+            <button onClick={() => logoutFunc()}>
+              <MdAssignment />
+              Cadastro
+            </button>
+          </ButtonsDiv>
+        </Header>
+      )}
+    </>
   );
 };
 
