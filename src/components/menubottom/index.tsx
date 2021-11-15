@@ -1,12 +1,12 @@
 import { useLogin } from "../../providers/login";
 import { useHistory } from "react-router";
-import { ButtonsDiv, Header, Title } from "./style";
+import { ButtonsDiv, Footer } from "./style";
 import { FaHome, FaUser } from "react-icons/fa";
 import { MdAssignment } from "react-icons/md";
 import { FaMapMarkerAlt, FaHeart } from "react-icons/fa";
 import { IoMdExit } from "react-icons/io";
 
-const NavBar = () => {
+const MenuBottom = () => {
   const { logout, token } = useLogin();
   const history = useHistory();
 
@@ -21,10 +21,7 @@ const NavBar = () => {
   return (
     <>
       {token ? (
-        <Header>
-          <Title>
-            <span>Hungry</span> Traveler
-          </Title>
+        <Footer>
           <ButtonsDiv num={colored[history.location.pathname]}>
             <button onClick={() => history.push("/dashboard")}>
               <FaMapMarkerAlt />
@@ -39,12 +36,9 @@ const NavBar = () => {
               Sair
             </button>
           </ButtonsDiv>
-        </Header>
+        </Footer>
       ) : (
-        <Header>
-          <Title>
-            <span>Hungry</span> Traveler
-          </Title>
+        <Footer>
           <ButtonsDiv num={colored[history.location.pathname]}>
             <button onClick={() => history.push("/")}>
               <FaHome />
@@ -59,10 +53,10 @@ const NavBar = () => {
               Cadastro
             </button>
           </ButtonsDiv>
-        </Header>
+        </Footer>
       )}
     </>
   );
 };
 
-export default NavBar;
+export default MenuBottom;

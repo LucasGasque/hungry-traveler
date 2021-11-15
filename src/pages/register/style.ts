@@ -36,6 +36,7 @@ export const Container = styled.div`
   }
 
   @media (min-width: 768px) {
+    height: 100vh;
     justify-content: space-between;
     background-image: linear-gradient(
         rgba(12, 12, 12, 0.85),
