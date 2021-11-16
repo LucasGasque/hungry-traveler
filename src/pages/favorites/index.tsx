@@ -1,9 +1,9 @@
-import NavBar from "../../components/navbar";
+import NavBar from "../../components/navBar";
 import { Title } from "../dashboard/style";
 import { Container } from "./style";
 import { useLogin } from "../../providers/login";
 import { Redirect } from "react-router";
-import MenuBottom from "../../components/menubottom";
+import MenuBottom from "../../components/menuBottom";
 
 const Favorites = () => {
   const { token } = useLogin();

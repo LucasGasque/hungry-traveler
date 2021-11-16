@@ -1,9 +1,10 @@
-import NavBar from "../../components/navbar";
+import NavBar from "../../components/navBar";
 import { Container, Title } from "./style";
 import { useLogin } from "../../providers/login";
 import { Redirect } from "react-router";
 import MenuBottom from "../../components/menubottom";
 import Map from "../../components/map";
+
 
 const Dashboard = () => {
   const { token } = useLogin();

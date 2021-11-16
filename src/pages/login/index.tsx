@@ -7,7 +7,7 @@ import { Container, Form, Title } from "./style";
 import { UserData } from "../../types/index";
 import { useLogin } from "../../providers/login";
 import { FormTitle } from "../register/style";
-import NavBar from "../../components/navbar";
+import NavBar from "../../components/navBar";
 
 const Login = () => {
   const { signIn } = useLogin();
