@@ -3,6 +3,7 @@ import { Container, Title } from "./style";
 import { useLogin } from "../../providers/login";
 import { Redirect } from "react-router";
 import MenuBottom from "../../components/menubottom";
+import Map from "../../components/map";
 
 const Dashboard = () => {
   const { token } = useLogin();
@@ -15,6 +16,7 @@ const Dashboard = () => {
           <Title>
             <span>Hungry&nbsp;</span>Traveler
           </Title>
+          <Map />
           <MenuBottom />
         </Container>
       ) : (

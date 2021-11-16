@@ -10,10 +10,6 @@ import Search from "../search";
 import Locate from "../locate";
 import { Container } from "./style";
 
-const libraries = ["places"];
-
-interface MapProps {}
-
 const Map = () => {
   const containerStyle = { width: "100%", height: "100vh" };
   const [center, setCenter] = useState({ lat: -23.5549, lng: -46.63864 });
@@ -21,7 +17,6 @@ const Map = () => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
     googleMapsApiKey: `${process.env.REACT_APP_GOOGLE_MAPS_API_KEY}`,
-    // libraries: libraries,
   });
   const { restaurants } = useRestaurants();
   const [filteredRestaurants, setFilteredRestaurants] = useState([
@@ -62,7 +57,7 @@ const Map = () => {
 
   const panTo = useCallback(({ lat, lng }) => {
     mapRef.current.panTo({ lat, lng });
-    mapRef.current.setZoom(20);
+    mapRef.current.setZoom(15);
   }, []);
 
   const onLoad = useCallback((map) => {
@@ -100,12 +95,12 @@ const Map = () => {
             />
           ))}
           <Marker
-            position={{
-              lat: -23.5549,
-              lng: -46.63864,
-            }}
+            position={center}
             label="User"
-          ></Marker>
+          />
+          <DirectionsRenderer 
+            
+          />
         </GoogleMap>
       ) : (
         <></>

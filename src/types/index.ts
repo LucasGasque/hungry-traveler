@@ -6,8 +6,6 @@ export interface UserData {
   passwordConfirm?: string;
 }
 
-
-
 export interface RestaurantsData {
   name: string;
   type: string;
@@ -33,8 +31,8 @@ export interface DishesData {
 }
 
 export interface LocationData {
+  lat: number;
   lng: number;
-  ltd: number;
 }
 
 export interface ScoreData {
