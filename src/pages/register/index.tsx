@@ -6,7 +6,7 @@ import { useRegister } from "../../providers/register";
 import { UserData } from "../../types";
 import { schema } from "../../validations/RegisterSchema";
 import { useHistory } from "react-router";
-import NavBar from "../../components/navbar";
+import NavBar from "../../components/navBar";
 
 const Register = () => {
   const { registerUser } = useRegister();
