@@ -25,12 +25,11 @@ const Login = () => {
       <Form onSubmit={handleSubmit(signIn)}>
         <FormTitle>Login</FormTitle>
         <TextField
-          color="info"
+          color="primary"
           sx={{
             width: "100%",
             height: "45px",
-            backgroundColor: "#F5F5F5",
-            borderRadius: "8px",
+            borderRadius: "8px"
           }}
           label="E-mail"
           {...register("email")}
@@ -38,11 +37,10 @@ const Login = () => {
           helperText={errors.email?.message}
         />
         <TextField
-          color="info"
+          color="primary"
           sx={{
             width: "100%",
             height: "45px",
-            backgroundColor: "#F5F5F5",
             borderRadius: "8px",
           }}
           type="password"
@@ -61,8 +59,6 @@ const Login = () => {
             textTransform: "none",
             fontFamily: "Righteous, cursive",
             borderRadius: "8px",
-            backgroundColor: "#F5F5F5",
-            color: "#E0E0E0",
           }}
           type="submit"
         >
@@ -72,7 +68,7 @@ const Login = () => {
           Ainda não tem uma conta?
           <span
             onClick={() => {
-              history.push("/login");
+              history.push("/register");
             }}
           >
             {" "}
