@@ -5,7 +5,6 @@ import { Redirect } from "react-router";
 import MenuBottom from "../../components/menuBottom/index";
 import Map from "../../components/map";
 
-
 const Dashboard = () => {
   const { token } = useLogin();
 
