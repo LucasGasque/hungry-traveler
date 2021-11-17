@@ -16,6 +16,7 @@ export interface RestaurantsData {
   menu: DishesData[];
   businessHours: BusinessHoursData;
   id: number;
+  description: string;
 }
 
 export interface BusinessHoursData {
