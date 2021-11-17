@@ -28,8 +28,10 @@ const Login = () => {
           color="primary"
           sx={{
             width: "100%",
+            maxWidth: "340px",
             height: "45px",
-            borderRadius: "8px"
+            borderRadius: "8px",
+            marginBottom: "20px",
           }}
           label="E-mail"
           {...register("email")}
@@ -40,8 +42,10 @@ const Login = () => {
           color="primary"
           sx={{
             width: "100%",
+            maxWidth: "340px",
             height: "45px",
             borderRadius: "8px",
+            marginBottom: "20px",
           }}
           type="password"
           label="Senha"
@@ -54,6 +58,7 @@ const Login = () => {
           variant="contained"
           sx={{
             width: "100%",
+            maxWidth: "340px",
             height: "45px",
             padding: "0",
             textTransform: "none",

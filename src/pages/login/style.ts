@@ -3,18 +3,19 @@ import travelerS from "../../assets/img/travelerS.png";
 import traveler from "../../assets/img/traveler.png";
 
 export const Container = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient(
       270.31deg,
-      rgba(0, 0, 0, 0.6) 0.28%,
-      rgba(0, 0, 0, 0.15) 49.5%,
-      rgba(0, 0, 0, 0.6) 99.75%
+      rgba(12, 12, 12, 0.85),
+      rgba(12, 12, 12, 0.85),
+      rgba(12, 12, 12, 0.85),
+      rgba(12, 12, 12, 0.85)
     ),
     url(${travelerS});
   background-size: 100% 100%;
   color: var(--gray-0);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   padding-bottom: 20px;
@@ -27,17 +28,11 @@ export const Container = styled.div`
 
   span {
     color: var(--primary);
+    cursor: pointer;
   }
 
   @media (min-width: 768px) {
     justify-content: space-between;
-    background-image: linear-gradient(
-        rgba(12, 12, 12, 0.85),
-        rgba(12, 12, 12, 0.85),
-        rgba(12, 12, 12, 0.85),
-        rgba(12, 12, 12, 0.85)
-      ),
-      url(${traveler});
   }
 `;
 
@@ -46,10 +41,7 @@ export const Title = styled.h1`
   font-size: 30px;
   letter-spacing: 2px;
   color: var(--gray-0);
-
-  span {
-    color: var(--primary);
-  }
+  margin: 30px 0;
 
   @media (min-width: 768px) {
     display: none;
@@ -57,16 +49,17 @@ export const Title = styled.h1`
 `;
 
 export const Form = styled.form`
-  width: 80%;
-  max-width: 460px;
+  max-width: 464px;
+  width: 95%;
+  height: 428px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-gap: 1rem;
-  padding: 20px;
+  justify-content: space-around;
+  padding: 2rem;
   padding-top: 0;
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  border-radius: 10px;
   box-sizing: border-box;
 
   .css-glmvsh-MuiInputBase-root-MuiOutlinedInput-root {
@@ -91,10 +84,6 @@ export const Form = styled.form`
   }
 
   @media (min-width: 768px) {
-    background: rgba(0, 0, 0, 0.6);
-    border: none;
     margin: auto auto;
-    border-radius: 10px;
-    padding: 2rem 4rem;
   }
 `;

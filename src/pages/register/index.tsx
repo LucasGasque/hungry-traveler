@@ -26,8 +26,10 @@ const Register = () => {
           color="primary"
           sx={{
             width: "100%",
+            maxWidth: "340px",
             height: "45px",
             borderRadius: "8px",
+            marginBottom: "20px",
           }}
           label="Nome"
           {...register("name")}
@@ -38,8 +40,10 @@ const Register = () => {
           color="primary"
           sx={{
             width: "100%",
+            maxWidth: "340px",
             height: "45px",
             borderRadius: "8px",
+            marginBottom: "20px",
           }}
           label="E-mail"
           {...register("email")}
@@ -50,8 +54,10 @@ const Register = () => {
           color="primary"
           sx={{
             width: "100%",
+            maxWidth: "340px",
             height: "45px",
             borderRadius: "8px",
+            marginBottom: "20px",
           }}
           label="Confirmar E-mail"
           {...register("emailConfirm")}
@@ -62,8 +68,10 @@ const Register = () => {
           color="primary"
           sx={{
             width: "100%",
+            maxWidth: "340px",
             height: "45px",
             borderRadius: "8px",
+            marginBottom: "20px",
           }}
           type="password"
           label="Senha"
@@ -75,8 +83,10 @@ const Register = () => {
           color="primary"
           sx={{
             width: "100%",
+            maxWidth: "340px",
             height: "45px",
             borderRadius: "8px",
+            marginBottom: "20px",
           }}
           type="password"
           label="Confirmar Senha"
@@ -89,6 +99,7 @@ const Register = () => {
           variant="contained"
           sx={{
             width: "100%",
+            maxWidth: "340px",
             height: "45px",
             padding: "0",
             textTransform: "none",
