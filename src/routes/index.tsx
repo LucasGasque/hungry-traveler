@@ -3,7 +3,6 @@ import Home from "../pages/home";
 import Register from "../pages/register";
 import Login from "../pages/login";
 import Dashboard from "../pages/dashboard";
-import Favorites from "../pages/favorites";
 
 const Routes = () => {
   return (
@@ -19,9 +18,6 @@ const Routes = () => {
       </Route>
       <Route path="/dashboard">
         <Dashboard />
-      </Route>
-      <Route path="/favorites">
-        <Favorites />
       </Route>
     </Switch>
   );
