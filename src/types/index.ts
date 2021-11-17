@@ -9,6 +9,7 @@ export interface UserData {
 export interface RestaurantsData {
   name: string;
   type: string;
+  description: string;
   location: LocationData;
   address: string;
   city: string;
