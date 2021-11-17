@@ -5,10 +5,12 @@ import { FaHome, FaUser } from "react-icons/fa";
 import { MdAssignment } from "react-icons/md";
 import { FaMapMarkerAlt, FaHeart } from "react-icons/fa";
 import { IoMdExit } from "react-icons/io";
+import { useFavorites } from "../../providers/favorites";
 
 const MenuBottom = () => {
   const { logout, token } = useLogin();
   const history = useHistory();
+  const { handleFavorites} = useFavorites()
 
   const colored: any = {
     "/": 1,
@@ -27,7 +29,7 @@ const MenuBottom = () => {
               <FaMapMarkerAlt />
               Mapa
             </button>
-            <button onClick={() => history.push("/favorites")}>
+            <button onClick={() => handleFavorites()}>
               <FaHeart />
               Favoritos
             </button>

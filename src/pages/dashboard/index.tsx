@@ -4,6 +4,8 @@ import { useLogin } from "../../providers/login";
 import { Redirect } from "react-router";
 import MenuBottom from "../../components/menuBottom/index";
 import Map from "../../components/map";
+import Favorites from "../../components/favorites";
+import { useFavorites } from "../../providers/favorites";
 
 const Dashboard = () => {
   const { token } = useLogin();
@@ -17,6 +19,7 @@ const Dashboard = () => {
             <span>Hungry&nbsp;</span>Traveler
           </Title>
           <Map />
+          <Favorites />
           <MenuBottom />
         </Container>
       ) : (
