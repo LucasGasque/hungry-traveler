@@ -2,7 +2,7 @@ import NavBar from "../../components/navBar";
 import { Container, Title } from "./style";
 import { useLogin } from "../../providers/login";
 import { Redirect } from "react-router";
-import MenuBottom from "../../components/menuBottom/index";
+import MenuBottom from "../../components/menuBottom";
 import Map from "../../components/map";
 
 const Dashboard = () => {

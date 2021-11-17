@@ -1,9 +1,8 @@
 import styled from "styled-components";
 import travelerS from "../../assets/img/travelerS.png";
-import traveler from "../../assets/img/traveler.png";
+import travelerDesktop from "../../assets/img/travelerDesktop.png";
 
 export const Container = styled.div`
-  min-height: 100vh;
   background-image: linear-gradient(
       270.31deg,
       rgba(12, 12, 12, 0.85),
@@ -13,12 +12,14 @@ export const Container = styled.div`
     ),
     url(${travelerS});
   background-size: 100% 100%;
+  background-repeat: no-repeat;
   color: var(--gray-0);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   padding-bottom: 20px;
+  min-height: 100vh;
 
   p {
     color: var(--gray-100);
@@ -31,8 +32,22 @@ export const Container = styled.div`
     cursor: pointer;
   }
 
+  .css-k4qjio-MuiFormHelperText-root.Mui-error {
+    font-size: 10px;
+    margin: 0;
+    margin-left: 2px;
+  }
+
   @media (min-width: 768px) {
     justify-content: space-between;
+    background-image: linear-gradient(
+        270.31deg,
+        rgba(12, 12, 12, 0.85),
+        rgba(12, 12, 12, 0.85),
+        rgba(12, 12, 12, 0.85),
+        rgba(12, 12, 12, 0.85)
+      ),
+      url(${travelerDesktop});
   }
 `;
 
