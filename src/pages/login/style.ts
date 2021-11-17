@@ -48,7 +48,6 @@ export const Container = styled.div`
         rgba(12, 12, 12, 0.85)
       ),
       url(${travelerDesktop});
-    background-repeat: no-repeat;
   }
 `;
 
