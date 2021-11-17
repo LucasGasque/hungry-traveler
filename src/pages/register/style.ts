@@ -1,25 +1,25 @@
 import styled from "styled-components";
 import travelerS from "../../assets/img/travelerS.png";
-import traveler from "../../assets/img/traveler.png";
+import travelerDesktop from "../../assets/img/travelerDesktop.png";
 
 export const Container = styled.div`
-  height: auto;
   background-image: linear-gradient(
       270.31deg,
-      rgba(0, 0, 0, 0.6) 0.28%,
-      rgba(0, 0, 0, 0.15) 49.5%,
-      rgba(0, 0, 0, 0.6) 99.75%
+      rgba(12, 12, 12, 0.85),
+      rgba(12, 12, 12, 0.85),
+      rgba(12, 12, 12, 0.85),
+      rgba(12, 12, 12, 0.85)
     ),
     url(${travelerS});
   background-size: 100% 100%;
-  background-position: center;
   background-repeat: no-repeat;
   color: var(--gray-0);
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   padding-bottom: 20px;
+  min-height: 100vh;
 
   p {
     color: var(--gray-100);
@@ -29,6 +29,7 @@ export const Container = styled.div`
 
   span {
     color: var(--primary);
+    cursor: pointer;
   }
 
   .css-k4qjio-MuiFormHelperText-root.Mui-error {
@@ -38,25 +39,25 @@ export const Container = styled.div`
   }
 
   @media (min-width: 768px) {
-    height: 100vh;
     justify-content: space-between;
     background-image: linear-gradient(
+        270.31deg,
         rgba(12, 12, 12, 0.85),
         rgba(12, 12, 12, 0.85),
         rgba(12, 12, 12, 0.85),
         rgba(12, 12, 12, 0.85)
       ),
-      url(${traveler});
-    padding-bottom: 0;
+      url(${travelerDesktop});
+    background-repeat: no-repeat;
   }
 `;
 
 export const Title = styled.h1`
-  margin-top: 20px;
-  padding: 40px 0;
   font-family: "Acme", sans-serif;
   font-size: 30px;
   letter-spacing: 2px;
+  color: var(--gray-0);
+  margin: 30px 0;
 
   @media (min-width: 768px) {
     display: none;
@@ -64,29 +65,26 @@ export const Title = styled.h1`
 `;
 
 export const FormTitle = styled.h1`
-  color: var(--primary);
+  color: #ffffff;
   font-family: "Righteous", cursive;
   margin-top: 1rem;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 1px;
-
-  @media (min-width: 768px) {
-    color: #ffffff;
-  }
 `;
 
 export const Form = styled.form`
-  width: 80%;
-  max-width: 460px;
+  max-width: 464px;
+  width: 95%;
+  height: 600px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  grid-gap: 1rem;
-  padding: 20px;
+  justify-content: space-around;
+  padding: 2rem;
   padding-top: 0;
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
+  border-radius: 10px;
   box-sizing: border-box;
 
   .css-hgkgee-MuiInputBase-root-MuiOutlinedInput-root {
@@ -95,6 +93,12 @@ export const Form = styled.form`
   }
 
   .css-xewhx1-MuiFormLabel-root-MuiInputLabel-root {
+    font-family: "Righteous", cursive;
+    font-size: 14px;
+    color: var(--gray-50);
+  }
+
+  .css-1n8hauo-MuiFormLabel-root-MuiInputLabel-root {
     font-family: "Righteous", cursive;
     font-size: 14px;
     color: var(--gray-50);
@@ -111,10 +115,6 @@ export const Form = styled.form`
   }
 
   @media (min-width: 768px) {
-    background: rgba(0, 0, 0, 0.6);
-    border: none;
     margin: auto auto;
-    border-radius: 10px;
-    padding: 1rem 3rem;
   }
 `;

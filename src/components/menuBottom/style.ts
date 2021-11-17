@@ -9,7 +9,7 @@ export const Footer = styled.footer`
   width: 100%;
   height: 68px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   @media (min-width: 768px) {
@@ -19,27 +19,37 @@ export const Footer = styled.footer`
 
 export const ButtonsDiv = styled.div<ContProps>`
   width: 100%;
+  max-width: 500px;
   display: flex;
   justify-content: space-around;
-  margin: 0 15px;
+  align-items: center;
 
   button {
-    width: 30%;
-    height: 40px;
+    width: 108px;
+    height: 42px;
     border-radius: 8px;
     background: var(--gray-20);
     color: var(--gray-50);
-    /* margin: 0 1rem; */
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     font-size: 12px;
     cursor: pointer;
+    margin: 0 2px;
 
     svg {
       width: 20px;
       height: 24px;
     }
+  }
+
+  button:hover{
+    background: #fff;
+    color: var(--primary);
+  }
+
+  button:active{
+    transform: scale(95%);
   }
 
   button:nth-child(${(props) => props.num}) {

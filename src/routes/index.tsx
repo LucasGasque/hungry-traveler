@@ -6,6 +6,7 @@ import Dashboard from "../pages/dashboard";
 import Favorites from "../pages/favorites";
 import RestaurantDashboard from "../pages/restaurantDashboard";
 
+
 const Routes = () => {
   return (
     <Switch>
@@ -27,6 +28,7 @@ const Routes = () => {
       <Route path="/restaurant/:id">
         <RestaurantDashboard />
       </Route>
+
     </Switch>
   );
 };

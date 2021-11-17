@@ -1,32 +1,36 @@
 import styled from "styled-components";
 import travelerS from "../../assets/img/travelerS.png";
-import traveler from "../../assets/img/traveler.png";
+import travelerDesktop from "../../assets/img/travelerDesktop.png";
+
 
 export const Container = styled.div`
   background-image: linear-gradient(
       270.31deg,
-      rgba(0, 0, 0, 0.6) 0.28%,
-      rgba(0, 0, 0, 0.15) 49.5%,
-      rgba(0, 0, 0, 0.6) 99.75%
+      rgba(12, 12, 12, 0.85),
+      rgba(12, 12, 12, 0.85),
+      rgba(12, 12, 12, 0.85),
+      rgba(12, 12, 12, 0.85)
     ),
     url(${travelerS});
   background-size: 100% 100%;
+  background-repeat: no-repeat;
   color: var(--gray-0);
   height: 100vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 
   @media (min-width: 768px) {
     justify-content: space-between;
     background-image: linear-gradient(
+        270.31deg,
         rgba(12, 12, 12, 0.85),
         rgba(12, 12, 12, 0.85),
         rgba(12, 12, 12, 0.85),
         rgba(12, 12, 12, 0.85)
       ),
-      url(${traveler});
+      url(${travelerDesktop});
   }
 `;
 
@@ -46,8 +50,7 @@ export const Title = styled.h1`
 `;
 
 export const PhraseMobile = styled.p`
-  margin: 5px 0;
-  margin-top: 20px;
+  margin: 30px 0;
   font-family: "Righteous", cursive;
   font-size: 16px;
   text-align: center;

@@ -18,6 +18,8 @@ interface FavoritesContextData {
   favorites: FavoritesData[];
   addFavorites: (restaurantId: number) => void;
   removeFavorites: (id: number) => void;
+  showFavorites: boolean;
+  handleFavorites: () => void;
 }
 
 const FavoritesContext = createContext<FavoritesContextData>(
@@ -27,6 +29,8 @@ const FavoritesContext = createContext<FavoritesContextData>(
 export const FavoritesProvider = ({ children }: FavoritesProps) => {
   const { userId, token } = useLogin();
   const [favorites, setFavorites] = useState([]);
+  const [showFavorites, setShowFavorites] = useState(false);
+  const handleFavorites = () => setShowFavorites(!showFavorites)
 
   const getFavorites = () => {
     api
@@ -84,7 +88,13 @@ export const FavoritesProvider = ({ children }: FavoritesProps) => {
 
   return (
     <FavoritesContext.Provider
-      value={{ favorites, addFavorites, removeFavorites }}
+      value={{
+        favorites,
+        addFavorites,
+        removeFavorites,
+        showFavorites,
+        handleFavorites,
+      }}
     >
       {children}
     </FavoritesContext.Provider>
