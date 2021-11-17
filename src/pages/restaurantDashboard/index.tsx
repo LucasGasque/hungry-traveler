@@ -16,11 +16,13 @@ import { FaHeart } from "react-icons/fa";
 import { Rating, Stack } from "@mui/material";
 import { useRestaurants } from "../../providers/restaurants";
 import { useEffect, useState } from "react";
-import { RestaurantsData } from "../../types";
+import { RestaurantsData, BusinessHoursData } from "../../types";
+import { useScore } from "../../providers/score";
 
 const RestaurantDashboard = () => {
   const { token } = useLogin();
   const { restaurants } = useRestaurants();
+  const { scores } = useScore();
   const params = useParams() as any;
   const [restaurante, setRestaurante] = useState<RestaurantsData>(
     {} as RestaurantsData
@@ -35,6 +37,10 @@ const RestaurantDashboard = () => {
       ),
     [restaurants]
   );
+
+  const score =
+    scores.map((item) => item.score).reduce((acc, note) => acc + note, 0) /
+    scores.length;
 
   return (
     <>
@@ -66,8 +72,8 @@ const RestaurantDashboard = () => {
             <ScoreDiv>
               <Stack spacing={1}>
                 <Rating
-                  name="half-rating-read"
-                  defaultValue={2.5}
+                  name="simple-controlled"
+                  value={score}
                   precision={0.5}
                   readOnly
                 />
