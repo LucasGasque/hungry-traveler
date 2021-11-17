@@ -1,18 +1,20 @@
 import { useState, useCallback, useRef, useEffect } from "react";
-import {
-  GoogleMap,
-  useJsApiLoader,
-  Marker,
-  DirectionsRenderer,
-} from "@react-google-maps/api";
+import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import { useRestaurants } from "../../providers/restaurants";
 import Search from "../search";
 import Locate from "../locate";
 import { Container } from "./style";
+import MapRoutes from "../mapRoutes";
+import { LocationData } from "../../types";
 
 const Map = () => {
   const containerStyle = { width: "100%", height: "100vh" };
   const [center, setCenter] = useState({ lat: -23.5549, lng: -46.63864 });
+  const [goal, setGoal] = useState({
+    lat: -23.561747395413516,
+    lng: -46.681951593872625,
+  });
+  const [showRoute, setShowRoute] = useState(false);
 
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
@@ -29,6 +31,11 @@ const Map = () => {
         name.toLowerCase().includes(loweredInput)
       )
     );
+  };
+
+  const setRoute = (location: LocationData) => {
+    setGoal(location);
+    setShowRoute(true);
   };
 
   const geoLocation = () => {
@@ -94,13 +101,8 @@ const Map = () => {
               label={restaurant.name}
             />
           ))}
-          <Marker
-            position={center}
-            label="User"
-          />
-          <DirectionsRenderer 
-            
-          />
+          <Marker position={center} label="User" />
+          {showRoute && <MapRoutes center={center} goal={goal} />}
         </GoogleMap>
       ) : (
         <></>

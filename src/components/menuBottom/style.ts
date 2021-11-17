@@ -24,8 +24,8 @@ export const ButtonsDiv = styled.div<ContProps>`
   margin: 0 15px;
 
   button {
-    width: 30%;
-    height: 40px;
+    width: 108px;
+    height: 42px;
     border-radius: 8px;
     background: var(--gray-20);
     color: var(--gray-50);
@@ -35,11 +35,21 @@ export const ButtonsDiv = styled.div<ContProps>`
     justify-content: space-evenly;
     font-size: 12px;
     cursor: pointer;
+    flex-shrink: 0;
 
     svg {
       width: 20px;
       height: 24px;
     }
+  }
+
+  button:hover{
+    background: #fff;
+    color: var(--primary);
+  }
+
+  button:active{
+    transform: scale(95%);
   }
 
   button:nth-child(${(props) => props.num}) {
