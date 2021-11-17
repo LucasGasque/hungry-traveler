@@ -4,6 +4,7 @@ import Register from "../pages/register";
 import Login from "../pages/login";
 import Dashboard from "../pages/dashboard";
 import Favorites from "../pages/favorites";
+import RestaurantDashboard from "../pages/restaurantDashboard";
 
 const Routes = () => {
   return (
@@ -22,6 +23,9 @@ const Routes = () => {
       </Route>
       <Route path="/favorites">
         <Favorites />
+      </Route>
+      <Route path="/restaurant/:id">
+        <RestaurantDashboard />
       </Route>
     </Switch>
   );
