@@ -2,7 +2,7 @@ import { useForm } from "react-hook-form";
 import { schema } from "../../validations/LoginSchema";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { TextField, Button } from "@mui/material";
-import { useHistory } from "react-router";
+import { Redirect, useHistory } from "react-router-dom";
 import { Container, Form, Title } from "./style";
 import { UserData } from "../../types/index";
 import { useLogin } from "../../providers/login";
@@ -10,7 +10,7 @@ import { FormTitle } from "../register/style";
 import NavBar from "../../components/navBar";
 
 const Login = () => {
-  const { signIn } = useLogin();
+  const { signIn, token } = useLogin();
   const {
     register,
     handleSubmit,
@@ -19,7 +19,9 @@ const Login = () => {
   const history = useHistory();
 
   return (
-    <Container>
+    <>
+    {!token ? 
+      <Container>
       <NavBar />
       <Title>Hungry Traveler</Title>
       <Form onSubmit={handleSubmit(signIn)}>
@@ -82,6 +84,8 @@ const Login = () => {
         </p>
       </Form>
     </Container>
+     : <Redirect to="/dashboard"/>}
+   </>
   );
 };
 
