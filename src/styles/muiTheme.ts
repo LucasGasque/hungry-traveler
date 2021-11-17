@@ -15,7 +15,8 @@ export const muiTheme = createTheme({
       contrastText: "#505C6E",
     },
     text: {
-      primary: "#fff",
+      primary: "#F5F5F5",
+      secondary: "#505C6E",
     },
   },
 });
