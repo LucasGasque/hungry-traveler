@@ -38,9 +38,13 @@ const RestaurantDashboard = () => {
     [restaurants]
   );
 
-  const score =
-    scores.map((item) => item.score).reduce((acc, note) => acc + note, 0) /
-    scores.length;
+  const restaurantScore = scores
+    .filter((score) => score.restaurantId.toString() === params.id)
+    .map((rest) => rest.score);
+
+  const media =
+    restaurantScore.reduce((acc, note) => acc + note, 0) /
+    restaurantScore.length;
 
   return (
     <>
@@ -73,7 +77,7 @@ const RestaurantDashboard = () => {
               <Stack spacing={1}>
                 <Rating
                   name="simple-controlled"
-                  value={score}
+                  value={media}
                   precision={0.5}
                   readOnly
                 />
@@ -83,7 +87,10 @@ const RestaurantDashboard = () => {
           </RestaurantInfo>
           <Menu>
             {/* {restaurante.menu.map((dish) => (
-              <CardFood />
+              <CardFood name={dish.name}
+               price={dish.price}
+               img={dish.img}
+               description={dish.description}/>
             ))} */}
           </Menu>
           <MenuBottom />

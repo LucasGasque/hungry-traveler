@@ -17,12 +17,12 @@ const Home = () => {
       <NavBar />
       <Title>Hungry Traveler</Title>
       <PhraseMobile>
-        O jeito mais fácil de pedir delivery de comida e fazer mercado
+        Todos os seus restaurantes favoritos ao redor do mundo em um só lugar!
       </PhraseMobile>
       <DivButton>
         <h1>Escolha pelo caminho mais rápido</h1> <br />
         <PhraseDesktop>
-          O jeito mais fácil de pedir delivery de comida e fazer mercado
+          Todos os seus restaurantes favoritos ao redor do mundo em um só lugar!
         </PhraseDesktop>
         <Button
           color="primary"
