@@ -11,7 +11,7 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
-  position: absolute;
+  position: fixed;
   bottom: 0;
 
   @media (min-width: 768px) {
@@ -45,12 +45,12 @@ export const ButtonsDiv = styled.div<ContProps>`
     }
   }
 
-  button:hover{
+  button:hover {
     background: #fff;
     color: var(--primary);
   }
 
-  button:active{
+  button:active {
     transform: scale(95%);
   }
 

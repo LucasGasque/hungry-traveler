@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,6 +33,19 @@ export const Image = styled.div`
   }
 `;
 
+export const PositionDiv = styled.div`
+  position: absolute;
+  top: 30vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px;
+
+  @media (min-width: 768px) {
+    top: 40vh;
+  }
+`;
+
 export const HeaderDiv = styled.div`
   display: flex;
   align-items: center;
@@ -60,8 +74,8 @@ export const RestaurantInfo = styled.div`
   width: 95%;
   background-color: #ffffff;
   border-radius: 10px 10px 0px 0px;
-  position: absolute;
-  top: 30vh;
+  /* position: absolute;
+  top: 30vh; */
   border: 15px solid var(--gray-20);
 
   h1 {
@@ -70,7 +84,7 @@ export const RestaurantInfo = styled.div`
   }
 
   @media (min-width: 768px) {
-    top: 40vh;
+    /* top: 40vh; */
     max-width: 900px;
   }
 `;
@@ -100,6 +114,14 @@ export const ScoreDiv = styled.div`
 `;
 
 export const Menu = styled.div`
+  width: 95%;
+  height: auto;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--gray-20);
+
+  @media (min-width: 768px) {
+    max-width: 900px;
+  }
 `;
