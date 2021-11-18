@@ -1,5 +1,5 @@
 import { useFavorites } from "../../providers/favorites";
-import { Shadow, Container, Header, Button, Box } from "./style";
+import { Shadow, Container, Header, Button, Box, Text } from "./style";
 import { AiOutlineClose } from "react-icons/ai";
 import { useRestaurants } from "../../providers/restaurants";
 import { useState, useEffect } from "react";
@@ -37,7 +37,7 @@ const Favorites = () => {
               <RestaurantCard key={favorite.id} restaurant={favorite} />
             ))
           ) : (
-            <p>Você ainda não tem restaurantes favoritos</p>
+            <Text>Você ainda não tem restaurantes favoritos</Text>
           )}
         </Box>
       </Container>

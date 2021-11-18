@@ -34,7 +34,6 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h1`
-  font-family: "Acme", sans-serif;
   font-size: 30px;
   letter-spacing: 2px;
   color: var(--gray-0);

@@ -62,7 +62,6 @@ export const ButtonsDiv = styled.div<ContProps>`
   }
 `;
 export const Title = styled.h1`
-  font-family: "Acme", sans-serif;
   font-size: 24px;
   letter-spacing: 2px;
   color: var(--gray-0);
