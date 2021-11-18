@@ -17,11 +17,7 @@ export default createGlobalStyle`
     outline: none;
     }
 
-    html {
-        @media(min-width: 768px) {
-            background-color: var(--gray-20);
-        }
-    }
+
     
     body{}
 

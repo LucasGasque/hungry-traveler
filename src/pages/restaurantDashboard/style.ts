@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,6 +36,7 @@ export const Image = styled.div`
 export const PositionDiv = styled.div`
   width: 100%;
   position: absolute;
+
   top: 150px;
   display: flex;
   flex-direction: column;
