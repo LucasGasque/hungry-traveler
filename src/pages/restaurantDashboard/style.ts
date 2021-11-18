@@ -84,8 +84,6 @@ export const RestaurantInfo = styled.div`
   width: 95%;
   background-color: #ffffff;
   border-radius: 10px 10px 0px 0px;
-  /* position: absolute;
-  top: 30vh; */
   border: 15px solid var(--gray-20);
 
   h1 {
@@ -94,7 +92,6 @@ export const RestaurantInfo = styled.div`
   }
 
   @media (min-width: 768px) {
-    /* top: 40vh; */
     max-width: 900px;
   }
 `;

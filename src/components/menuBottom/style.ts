@@ -5,6 +5,7 @@ export interface ContProps {
 }
 
 export const Footer = styled.footer`
+  z-index: 30;
   background: rgba(51, 51, 51, 0.9);
   width: 100%;
   height: 68px;
