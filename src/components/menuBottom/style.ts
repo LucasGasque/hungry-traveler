@@ -11,6 +11,8 @@ export const Footer = styled.footer`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  bottom: 0;
 
   @media (min-width: 768px) {
     display: none;
