@@ -79,7 +79,7 @@ const RestaurantDashboard = () => {
                 <Rating
                   name="simple-controlled"
                   value={media}
-                  precision={0.5}
+                  precision={0.1}
                   readOnly
                 />
               </Stack>
