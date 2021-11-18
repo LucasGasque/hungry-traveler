@@ -5,7 +5,6 @@ export const Container = styled.div``;
 export const Title = styled.h1`
   width: 100%;
   height: 68px;
-  font-family: "Acme", sans-serif;
   font-size: 24px;
   letter-spacing: 2px;
   color: var(--gray-0);

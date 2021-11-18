@@ -71,10 +71,10 @@ export const Box = styled.div`
     gap: 10px;
     overflow-y: auto;
     box-sizing: border-box;
+`
 
-    p{
-        color: black;
+export const Text = styled.p`
+    color: black;
         text-align: center;
         margin-left:-45px;
-    }
 `

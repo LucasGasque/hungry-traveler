@@ -23,6 +23,10 @@ export default createGlobalStyle`
     
     body{}
 
+    h1, button{
+        font-family: "Righteous",
+    }
+
     p {
         font-family: "Roboto"
     }

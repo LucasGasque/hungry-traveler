@@ -4,7 +4,6 @@ export const Container = styled.div`
   position: relative;
   width: 328px;
   height: 170px;
-  font-family: "Inter", sans-serif;
   margin: 10px;
   border-radius: 8px;
 
