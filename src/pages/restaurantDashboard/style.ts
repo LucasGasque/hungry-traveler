@@ -61,6 +61,8 @@ export const HeaderDiv = styled.div`
   }
 
   svg {
+    position: absolute;
+    right: 20px;
     color: var(--primary);
     width: 25px;
     height: 25px;
@@ -71,6 +73,10 @@ export const HeaderDiv = styled.div`
     align-items: center;
     width: 90%;
     max-width: 900px;
+
+    svg {
+      position: static;
+    }
   }
 `;
 
