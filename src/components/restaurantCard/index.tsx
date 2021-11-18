@@ -16,6 +16,7 @@ import Rating from "react-rating";
 import { Button } from "@mui/material";
 import { useHistory } from "react-router";
 import { useFavorites } from "../../providers/favorites";
+import { useScore } from "../../providers/score";
 
 interface Restaurant {
   restaurant: RestaurantsData;
@@ -34,6 +35,7 @@ const RestaurantCard = ({
     setIsVisible(!isVisible);
   };
 
+  const { scores } = useScore();
   const { favorites, addFavorites, removeFavorites } = useFavorites();
 
   const [isFavorite, setIsFavorite] = useState(
@@ -43,6 +45,14 @@ const RestaurantCard = ({
   const [favorite, setFavorite] = useState(
     favorites.filter((a) => a.restaurantId === restaurant.id)[0]
   );
+
+  const restaurantScore = scores
+    .filter((score) => score.restaurantId === restaurant.id)
+    .map((rest) => rest.score);
+
+  const media =
+    restaurantScore.reduce((acc, note) => acc + note, 0) /
+    restaurantScore.length;
 
   const handleFavorite = (id: number) => {
     if (isFavorite) {
@@ -70,7 +80,8 @@ const RestaurantCard = ({
             <p>{restaurant.type}</p>
             <Rating
               readonly
-              initialRating={3.5}
+              initialRating={media}
+              fractions={2}
               fullSymbol={<AiFillStar size={"16px"} color={"#EB972A"} />}
               emptySymbol={<AiOutlineStar size={"16px"} color={"#EB972A"} />}
             />

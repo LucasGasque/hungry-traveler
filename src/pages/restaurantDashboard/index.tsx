@@ -23,11 +23,12 @@ import { useScore } from "../../providers/score";
 import CardFood from "../../components/cardFood";
 import emptyStar from "../../assets/img/emptyStar.png";
 import fullStar from "../../assets/img/fullStar.png";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 const RestaurantDashboard = () => {
   const { token } = useLogin();
   const { restaurants } = useRestaurants();
-  const { scores } = useScore();
+  const { scores, addScore } = useScore();
   const params = useParams() as any;
   const [restaurante, setRestaurante] = useState<RestaurantsData>(
     {} as RestaurantsData
@@ -50,8 +51,6 @@ const RestaurantDashboard = () => {
   const media =
     restaurantScore.reduce((acc, note) => acc + note, 0) /
     restaurantScore.length;
-
-    console.log(media)
 
   return (
     <>
@@ -87,15 +86,16 @@ const RestaurantDashboard = () => {
               <ScoreDiv>
                 <Stack spacing={1}>
                   <Rating
-                  fractions={2}
+                    onClick={(value: number) => addScore(value, restaurante.id)}
+                    fractions={2}
                     placeholderRating={media}
+                    fullSymbol={<AiFillStar size={"22px"} color={"#EB972A"} />}
                     emptySymbol={
-                      <img src={emptyStar} alt="" className="icon" />
+                      <AiOutlineStar size={"22px"} color={"#EB972A"} />
                     }
                     placeholderSymbol={
-                      <img src={fullStar} alt="" className="icon" />
+                      <AiFillStar size={"22px"} color={"#EB972A"} />
                     }
-                    fullSymbol={<img src={fullStar} alt="" className="icon" />}
                   />
                 </Stack>
                 <h3>Dê sua nota</h3>

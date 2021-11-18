@@ -37,10 +37,11 @@ export const ScoreProvider = ({ children }: ScoreProps) => {
 
   const addScore = async (score: number, restaurantId: number) => {
     const data = {
-      userId: userId,
+      userId: Number(userId),
       restaurantId: restaurantId,
       score: score,
     };
+
     await api
       .post("/score", data, {
         headers: {
