@@ -11,14 +11,14 @@ export const Container = styled.div`
       rgba(12, 12, 12, 0.85)
     ),
     url(${travelerS});
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   color: var(--gray-0);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 78px;
   min-height: 100vh;
 
   p {

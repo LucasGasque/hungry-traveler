@@ -2,7 +2,6 @@ import styled from "styled-components";
 import travelerS from "../../assets/img/travelerS.png";
 import travelerDesktop from "../../assets/img/travelerDesktop.png";
 
-
 export const Container = styled.div`
   background-image: linear-gradient(
       270.31deg,
@@ -12,7 +11,7 @@ export const Container = styled.div`
       rgba(12, 12, 12, 0.85)
     ),
     url(${travelerS});
-  background-size: 100% 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   color: var(--gray-0);
   height: 100vh;
