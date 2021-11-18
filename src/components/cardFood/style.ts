@@ -40,6 +40,7 @@ export const Name = styled.span`
   font-size: 23px;
   width: 150px;
   z-index: 21;
+  width: 150px;
   font-weight: bolder;
   left: 5%;
   top: 10%;

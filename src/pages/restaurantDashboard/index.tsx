@@ -14,17 +14,21 @@ import {
   TypeHour,
 } from "./style";
 import { FaHeart } from "react-icons/fa";
-import { Rating, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
+import Rating from "react-rating";
 import { useRestaurants } from "../../providers/restaurants";
 import { useEffect, useState } from "react";
 import { RestaurantsData, BusinessHoursData } from "../../types";
 import { useScore } from "../../providers/score";
 import CardFood from "../../components/cardFood";
+import emptyStar from "../../assets/img/emptyStar.png";
+import fullStar from "../../assets/img/fullStar.png";
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
 const RestaurantDashboard = () => {
   const { token } = useLogin();
   const { restaurants } = useRestaurants();
-  const { scores } = useScore();
+  const { scores, addScore } = useScore();
   const params = useParams() as any;
   const [restaurante, setRestaurante] = useState<RestaurantsData>(
     {} as RestaurantsData
@@ -82,10 +86,16 @@ const RestaurantDashboard = () => {
               <ScoreDiv>
                 <Stack spacing={1}>
                   <Rating
-                    name="simple-controlled"
-                    value={media}
-                    precision={0.1}
-                    readOnly
+                    onClick={(value: number) => addScore(value, restaurante.id)}
+                    fractions={2}
+                    placeholderRating={media}
+                    fullSymbol={<AiFillStar size={"22px"} color={"#EB972A"} />}
+                    emptySymbol={
+                      <AiOutlineStar size={"22px"} color={"#EB972A"} />
+                    }
+                    placeholderSymbol={
+                      <AiFillStar size={"22px"} color={"#EB972A"} />
+                    }
                   />
                 </Stack>
                 <h3>Dê sua nota</h3>
