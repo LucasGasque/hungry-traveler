@@ -15,8 +15,8 @@ export const Header = styled.header`
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top:0;
-    left:0;
+    top: 0;
+    left: 0;
     right: 0;
     z-index: 10;
   }
@@ -47,12 +47,12 @@ export const ButtonsDiv = styled.div<ContProps>`
     }
   }
 
-  button:hover{
+  button:hover {
     background: #fff;
     color: var(--primary);
   }
 
-  button:active{
+  button:active {
     transform: scale(95%);
   }
 
@@ -71,5 +71,9 @@ export const Title = styled.h1`
   span {
     font-size: 30px;
     color: var(--primary);
+  }
+
+  @media (min-width: 768px) {
+    cursor: default;
   }
 `;
