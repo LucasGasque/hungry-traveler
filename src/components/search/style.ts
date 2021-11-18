@@ -4,19 +4,20 @@ export const Container = styled.div`
   padding: 10px;
   z-index: 10;
   background-color: #fff;
-  position: absolute;
   display: grid;
-  top: 100px;
-  right: 4rem;
   place-items: center;
   border-radius: 10px;
-  width: 40%;
+  max-width: 365px;
+  width: 98%;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
 
-  @media (max-width: 768px) {
-    top: 10px;
-    right: 5%;
-    width: 90%;
-    margin: 0 auto;
+  @media (min-width: 768px) {
+    transform: translateX(0);
+    left: 410px;
+    top: 100px;
   }
 `;
 

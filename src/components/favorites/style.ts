@@ -37,7 +37,7 @@ export const Header = styled.div`
     border-radius: 10px 10px 0 0;
     
     h3{
-        color: #fff;
+        color: var(--gray-0);
         margin-left: 20px;
     }
 
@@ -63,4 +63,10 @@ export const Box = styled.div`
     background-color:var(--gray-0);
     height: 100%;
     border-radius: 0 0 10px 10px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow-y: auto;
+    box-sizing: border-box;
 `

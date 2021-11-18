@@ -36,8 +36,11 @@ const Map = () => {
   };
 
   const setRoute = (location: LocationData) => {
-    setGoal(location);
-    setShowRoute(true);
+    if (showRoute) setShowRoute(false);
+    else {
+      setGoal(location);
+      setShowRoute(true);
+    }
   };
 
   const geoLocation = () => {
@@ -89,6 +92,21 @@ const Map = () => {
         setSearchValue={setSearchValue}
         searchValue={searchValue}
       />
+      {searchValue && (
+        <SearchResults>
+          {filteredRestaurants.length > 0 ? (
+            filteredRestaurants.map((restaurant) => (
+              <RestaurantCard
+                setRoute={setRoute}
+                restaurant={restaurant}
+                panTo={panTo}
+              />
+            ))
+          ) : (
+            <p>Nenhum restaurante encontrado</p>
+          )}
+        </SearchResults>
+      )}
       <Locate panTo={panTo} center={center} />
       {isLoaded ? (
         <GoogleMap
@@ -128,21 +146,6 @@ const Map = () => {
         </GoogleMap>
       ) : (
         <></>
-      )}
-      {searchValue && (
-        <SearchResults>
-          {filteredRestaurants.length > 0 ? (
-            filteredRestaurants.map((restaurant) => (
-              <RestaurantCard
-                setRoute={setRoute}
-                restaurant={restaurant}
-                panTo={panTo}
-              />
-            ))
-          ) : (
-            <p>Nenhum restaurante encontrado</p>
-          )}
-        </SearchResults>
       )}
     </Container>
   );
