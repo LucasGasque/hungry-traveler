@@ -9,13 +9,14 @@ import {
 } from "./style";
 import { Button } from "@mui/material";
 import NavBar from "../../components/navBar";
+import MenuBottom from "../../components/menuBottom";
 
 const Home = () => {
   const history = useHistory();
   return (
     <Container>
       <NavBar />
-      <Title>Hungry Traveler</Title>
+      <Title><span>Hungry</span> Traveler</Title>
       <PhraseMobile>
         Todos os seus restaurantes favoritos ao redor do mundo em um só lugar!
       </PhraseMobile>
@@ -60,6 +61,7 @@ const Home = () => {
           Registrar-se
         </Button>
       </DivButton>
+      <MenuBottom />
     </Container>
   );
 };

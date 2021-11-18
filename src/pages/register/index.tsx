@@ -8,6 +8,7 @@ import { schema } from "../../validations/RegisterSchema";
 import { Redirect, useHistory } from "react-router-dom";
 import NavBar from "../../components/navBar";
 import { useLogin } from "../../providers/login";
+import MenuBottom from "../../components/menuBottom";
 
 const Register = () => {
   const { registerUser } = useRegister();
@@ -23,7 +24,9 @@ const Register = () => {
       {!token ? (
         <Container>
           <NavBar />
-          <Title>Hungry Traveler</Title>
+          <Title>
+            <span>Hungry</span> Traveler
+          </Title>
           <Form onSubmit={handleSubmit(registerUser)}>
             <FormTitle>Cadastro</FormTitle>
             <TextField
@@ -126,6 +129,7 @@ const Register = () => {
               </span>
             </p>
           </Form>
+          <MenuBottom />
         </Container>
       ) : (
         <Redirect to="/dashboard" />
