@@ -94,6 +94,9 @@ export const HeaderDiv = styled.div`
     svg {
       position: static;
     }
+    > :last-child {
+      cursor: pointer;
+    }
   }
 `;
 

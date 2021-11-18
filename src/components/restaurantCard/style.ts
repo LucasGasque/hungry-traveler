@@ -15,8 +15,8 @@ interface ArrowDivData {
   isVisible: boolean;
 }
 
-interface HeartData{
-  isFavorite: boolean
+interface HeartData {
+  isFavorite: boolean;
 }
 
 export const Container = styled.div``;
@@ -35,7 +35,7 @@ export const MainContent = styled.div`
     min-width: 105px;
     height: 100%;
     max-width: 105px;
-    object-fit: cover
+    object-fit: cover;
   }
 `;
 
@@ -108,13 +108,14 @@ export const Details = styled.div`
 `;
 
 export const Heart = styled.div<HeartData>`
-  button{
+  button {
+    cursor: pointer;
     background-color: transparent;
     border: none;
-    color: ${props => props.isFavorite ? '#EB2A44' : '#828282'};
+    color: ${(props) => (props.isFavorite ? "#EB2A44" : "#828282")};
   }
-  
-  button:active{
+
+  button:active {
     transform: scale(90%);
   }
-`
+`;
