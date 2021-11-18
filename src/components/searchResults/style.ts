@@ -32,7 +32,6 @@ export const Container = styled.div`
   }
   > div:last-child {
     width: 100%;
-    height: 600px;
     max-height: calc(100vh - 286px);
     overflow-y: auto;
     box-sizing: border-box;
