@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Container,
   RestaurantTitle,
@@ -6,6 +6,7 @@ import {
   MainContent,
   Details,
   ArrowDiv,
+  Heart,
 } from "./style";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { FaHeart } from "react-icons/fa";
@@ -14,23 +15,55 @@ import { LocationData, RestaurantsData } from "../../types";
 import Rating from "react-rating";
 import { Button } from "@mui/material";
 import { useHistory } from "react-router";
+import { useFavorites } from "../../providers/favorites";
 
 interface Restaurant {
   restaurant: RestaurantsData;
   setRoute?: (location: LocationData) => void;
+  panTo?: (location: LocationData) => void;
 }
 
-const RestaurantCard = ({ restaurant, setRoute }: Restaurant) => {
+const RestaurantCard = ({
+  restaurant,
+  setRoute,
+  panTo = () => null,
+}: Restaurant) => {
   const history = useHistory();
-
   const [isVisible, setIsVisible] = useState(false);
-
   const handleVisibility = () => {
     setIsVisible(!isVisible);
   };
 
+  const { favorites, addFavorites, removeFavorites } = useFavorites();
+
+  const [isFavorite, setIsFavorite] = useState(
+    favorites.map((a) => a.restaurantId).includes(restaurant.id)
+  );
+
+  const [favorite, setFavorite] = useState(
+    favorites.filter((a) => a.restaurantId === restaurant.id)[0]
+  );
+
+  const handleFavorite = (id: number) => {
+    if (isFavorite) {
+      removeFavorites(favorite.id);
+    } else {
+      addFavorites(id);
+    }
+  };
+
+  useEffect(() => {
+    setIsFavorite(favorites.map((a) => a.restaurantId).includes(restaurant.id));
+  }, [favorites]);
+
+  useEffect(() => {
+    setFavorite(favorites.filter((a) => a.restaurantId === restaurant.id)[0]);
+  }, [favorites]);
+
+  console.log(favorites);
+
   return (
-    <Container>
+    <Container onClick={() => panTo(restaurant.location)}>
       <MainContent>
         <img src={restaurant.img} alt={restaurant.name} />
         <Content>
@@ -48,12 +81,12 @@ const RestaurantCard = ({ restaurant, setRoute }: Restaurant) => {
               {restaurant.businessHours.close}:00
             </p>
           </div>
-          <div>
-            <FaHeart />
+          <Heart isFavorite={isFavorite}>
+            <FaHeart onClick={() => handleFavorite(restaurant.id)} />
             <ArrowDiv onClick={handleVisibility} isVisible={isVisible}>
               <IoIosArrowDown />
             </ArrowDiv>
-          </div>
+          </Heart>
         </Content>
       </MainContent>
       {isVisible && (

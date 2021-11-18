@@ -35,18 +35,6 @@ export const ScoreProvider = ({ children }: ScoreProps) => {
       });
   };
 
-  console.log(scores);
-
-  const deleteScore = async (id: number) => {
-    await api
-      .delete(`/score/${id}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      .catch((error) => console.log(error));
-  };
-
   const addScore = async (score: number, restaurantId: number) => {
     const data = {
       userId: userId,
