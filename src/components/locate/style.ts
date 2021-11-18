@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   position: absolute;
-  right: 20px;
-  top: 10%;
+  left: 10px;
+  bottom: 20px;
   border: none;
   background-color: transparent;
-  z-index: 10;
+  z-index: 9;
 
   img {
     width: 100%;
@@ -20,5 +20,10 @@ export const Button = styled.button`
 
   :active {
     transform: scale(95%);
+  }
+  @media (min-width: 768px) {
+    left: auto;
+    right: 20px;
+    top: 10%;
   }
 `;

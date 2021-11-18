@@ -34,7 +34,12 @@ const MapRoutes = ({ center, goal }: MapRoutesProps) => {
     }
   );
 
-  return <DirectionsRenderer directions={directions} />;
+  return (
+    <DirectionsRenderer
+      options={{ suppressMarkers: true }}
+      directions={directions}
+    />
+  );
 };
 
 export default MapRoutes;
