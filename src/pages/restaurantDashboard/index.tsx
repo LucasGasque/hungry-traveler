@@ -72,9 +72,11 @@ const RestaurantDashboard = () => {
               <TypeHour>
                 <h3>{restaurante.type}</h3>
                 <h3>
-                  19:00 às 21:00
-                  {/* {restaurante.businessHours.open}:00h às{" "}
-                {restaurante.businessHours.close}:00h */}
+                  {/* 19:00 às 21:00 */}
+                  {restaurante.businessHours && restaurante.businessHours.open}
+                  :00h às{" "}
+                  {restaurante.businessHours && restaurante.businessHours.close}
+                  :00h
                 </h3>
               </TypeHour>
               <ScoreDiv>
@@ -90,15 +92,16 @@ const RestaurantDashboard = () => {
               </ScoreDiv>
             </RestaurantInfo>
             <Menu>
-              {restaurante.menu.map((dish, index) => (
-                <CardFood
-                  key={index}
-                  name={dish.name}
-                  price={dish.price}
-                  img={dish.img}
-                  description={dish.description}
-                />
-              ))}
+              {restaurante.menu &&
+                restaurante.menu.map((dish, index) => (
+                  <CardFood
+                    key={index}
+                    name={dish.name}
+                    price={dish.price}
+                    img={dish.img}
+                    description={dish.description}
+                  />
+                ))}
             </Menu>
           </PositionDiv>
           <MenuBottom />
