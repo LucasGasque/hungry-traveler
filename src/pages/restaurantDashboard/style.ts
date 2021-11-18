@@ -15,6 +15,8 @@ export const Image = styled.div`
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+  -webkit-text-stroke-width: 0.5px;
+  -webkit-text-stroke-color: #000;
 
   h1 {
     color: var(--gray-0);
@@ -34,6 +36,7 @@ export const Image = styled.div`
 `;
 
 export const PositionDiv = styled.div`
+  width: 100%;
   position: absolute;
   top: 30vh;
   display: flex;
@@ -43,6 +46,7 @@ export const PositionDiv = styled.div`
 
   @media (min-width: 768px) {
     top: 40vh;
+    padding-bottom: 0;
   }
 `;
 
@@ -100,6 +104,14 @@ export const TypeHour = styled.div`
   align-items: center;
   color: var(--gray-50);
   margin: 20px;
+
+  h3 {
+    width: 50%;
+  }
+
+  h3:nth-child(2) {
+    text-align: right;
+  }
 `;
 
 export const ScoreDiv = styled.div`
@@ -114,7 +126,7 @@ export const ScoreDiv = styled.div`
 `;
 
 export const Menu = styled.div`
-  width: 95%;
+  width: 100%;
   height: auto;
   display: flex;
   flex-wrap: wrap;
