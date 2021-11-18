@@ -10,15 +10,19 @@ import {
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { FaHeart } from "react-icons/fa";
 import { IoIosArrowDown } from "react-icons/io";
-import { RestaurantsData } from "../../types";
+import { LocationData, RestaurantsData } from "../../types";
 import Rating from "react-rating";
 import { Button } from "@mui/material";
+import { useHistory } from "react-router";
 
 interface Restaurant {
   restaurant: RestaurantsData;
+  setRoute?: (location: LocationData) => void;
 }
 
-const RestaurantCard = ({ restaurant }: Restaurant) => {
+const RestaurantCard = ({ restaurant, setRoute }: Restaurant) => {
+  const history = useHistory();
+
   const [isVisible, setIsVisible] = useState(false);
 
   const handleVisibility = () => {
@@ -68,9 +72,11 @@ const RestaurantCard = ({ restaurant }: Restaurant) => {
                 fontFamily: "Righteous, cursive",
                 borderRadius: "8px",
               }}
+              onClick={() => history.push(`/restaurant/${restaurant.id}`)}
             >
               Ir para página
             </Button>
+
             <Button
               color="secondary"
               variant="contained"
@@ -82,6 +88,9 @@ const RestaurantCard = ({ restaurant }: Restaurant) => {
                 fontFamily: "Righteous, cursive",
                 borderRadius: "8px",
               }}
+              onClick={
+                setRoute ? () => setRoute(restaurant.location) : () => ""
+              }
             >
               Traçar rota
             </Button>

@@ -18,4 +18,18 @@ export default createGlobalStyle`
     }
     
     body{}
+
+    p {
+        font-family: "Roboto"
+    }
+
+    ::-webkit-scrollbar {
+        width: 7px; 
+        height: 10px;         
+    }
+  
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--primary-50);  
+        border-radius: 20px;      
+    }
 `;

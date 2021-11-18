@@ -19,17 +19,16 @@ export const Container = styled.div``;
 
 export const MainContent = styled.div`
   display: flex;
-  width: 90%;
+  width: 100%;
   max-width: 375px;
   height: 125px;
   border-radius: 5px;
   background-color: #ffffff;
   border: 2px solid var(--gray-0);
-
   box-sizing: border-box;
   img {
     border-radius: 5px 0 0 5px;
-    width: 115px;
+    width: 105px;
     height: 100%;
   }
 `;
@@ -37,6 +36,7 @@ export const MainContent = styled.div`
 export const ArrowDiv = styled.div<ArrowDivData>`
   transition-duration: 0.4s;
   transform: rotate(${(props) => (props.isVisible ? "180deg" : "0")});
+  cursor: pointer;
 `;
 
 export const Content = styled.div`
@@ -45,7 +45,7 @@ export const Content = styled.div`
   border-radius: 0 5px 5px 0;
   display: flex;
   justify-content: space-between;
-  padding: 15px 20px;
+  padding: 10px 15px;
   box-sizing: border-box;
 
   p:nth-child(1n + 2) {
@@ -79,7 +79,7 @@ export const RestaurantTitle = styled.p`
 
 export const Details = styled.div`
   margin-top: 10px;
-  width: 90%;
+  width: 100%;
   max-width: 375px;
   display: flex;
   flex-direction: column;
