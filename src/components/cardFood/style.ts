@@ -37,6 +37,7 @@ export const Name = styled.span`
   position: absolute;
   color: var(--gray-0);
   font-size: 23px;
+  width: 150px;
   z-index: 21;
   font-weight: bolder;
   left: 5%;
