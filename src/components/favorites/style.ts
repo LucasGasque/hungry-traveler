@@ -64,9 +64,17 @@ export const Box = styled.div`
     height: 100%;
     border-radius: 0 0 10px 10px;
     padding: 15px;
+    padding-left: 60px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     gap: 10px;
     overflow-y: auto;
     box-sizing: border-box;
+
+    p{
+        color: black;
+        text-align: center;
+        margin-left:-45px;
+    }
 `
