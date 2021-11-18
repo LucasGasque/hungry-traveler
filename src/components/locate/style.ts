@@ -4,7 +4,7 @@ export const Button = styled.button`
   width: 50px;
   height: 50px;
   position: absolute;
-  left: 10px;
+  right: 10px;
   bottom: 20px;
   border: none;
   background-color: transparent;
@@ -20,10 +20,5 @@ export const Button = styled.button`
 
   :active {
     transform: scale(95%);
-  }
-  @media (min-width: 768px) {
-    left: auto;
-    right: 10px;
-    top: 10%;
   }
 `;

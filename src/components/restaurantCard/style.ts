@@ -108,5 +108,13 @@ export const Details = styled.div`
 `;
 
 export const Heart = styled.div<HeartData>`
-  color: ${props => props.isFavorite ? '#EB2A44' : '#828282'};
+  button{
+    background-color: transparent;
+    border: none;
+    color: ${props => props.isFavorite ? '#EB2A44' : '#828282'};
+  }
+  
+  button:active{
+    transform: scale(90%);
+  }
 `
