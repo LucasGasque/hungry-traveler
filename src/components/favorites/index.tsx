@@ -32,9 +32,13 @@ const Favorites = () => {
           </Button>
         </Header>
         <Box>
-          {userFavorites.map((favorite) => (
-            <RestaurantCard key={favorite.id} restaurant={favorite} />
-          ))}
+          {userFavorites.length ? (
+            userFavorites.map((favorite) => (
+              <RestaurantCard key={favorite.id} restaurant={favorite} />
+            ))
+          ) : (
+            <p>Você ainda não tem restaurantes favoritos</p>
+          )}
         </Box>
       </Container>
     </Shadow>

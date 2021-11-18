@@ -39,8 +39,8 @@ export const Container = styled.div`
     > div {
       background-color: var(--gray-0);
       border-radius: 0 0 10px 10px;
-      width: calc(365px - 10px);
-      max-width: 100%;
+      max-width: 365px;
+      width: 100%;
       padding: 15px;
       display: flex;
       flex-direction: column;
