@@ -97,6 +97,7 @@ const Map = () => {
           {filteredRestaurants.length > 0 ? (
             filteredRestaurants.map((restaurant) => (
               <RestaurantCard
+                key={restaurant.id}
                 setRoute={setRoute}
                 restaurant={restaurant}
                 panTo={panTo}
@@ -128,6 +129,7 @@ const Map = () => {
                 lat: restaurant.location.lat,
                 lng: restaurant.location.lng,
               }}
+              title={restaurant.name}
               icon={{
                 url: "/foodMarker.png",
                 scaledSize: new window.google.maps.Size(40, 40),

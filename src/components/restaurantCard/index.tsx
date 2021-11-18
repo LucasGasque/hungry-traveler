@@ -81,7 +81,12 @@ const RestaurantCard = ({
           </div>
           <Heart isFavorite={isFavorite}>
             <button>
-              <FaHeart onClick={() => handleFavorite(restaurant.id)} />
+              <FaHeart
+                onClick={(evt) => {
+                  handleFavorite(restaurant.id);
+                  evt.stopPropagation();
+                }}
+              />
             </button>
             <ArrowDiv onClick={handleVisibility} isVisible={isVisible}>
               <IoIosArrowDown />
