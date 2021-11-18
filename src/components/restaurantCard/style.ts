@@ -15,6 +15,10 @@ interface ArrowDivData {
   isVisible: boolean;
 }
 
+interface HeartData{
+  isFavorite: boolean
+}
+
 export const Container = styled.div``;
 
 export const MainContent = styled.div`
@@ -28,8 +32,10 @@ export const MainContent = styled.div`
   box-sizing: border-box;
   img {
     border-radius: 5px 0 0 5px;
-    width: 105px;
+    min-width: 105px;
     height: 100%;
+    max-width: 105px;
+    object-fit: cover
   }
 `;
 
@@ -37,6 +43,7 @@ export const ArrowDiv = styled.div<ArrowDivData>`
   transition-duration: 0.4s;
   transform: rotate(${(props) => (props.isVisible ? "180deg" : "0")});
   cursor: pointer;
+  color: var(--primary);
 `;
 
 export const Content = styled.div`
@@ -65,9 +72,6 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-  }
-  > div:last-child {
-    color: var(--primary);
   }
 `;
 
@@ -102,3 +106,7 @@ export const Details = styled.div`
     justify-content: space-between;
   }
 `;
+
+export const Heart = styled.div<HeartData>`
+  color: ${props => props.isFavorite ? '#EB2A44' : '#828282'};
+`

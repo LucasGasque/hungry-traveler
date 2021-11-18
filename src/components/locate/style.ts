@@ -23,7 +23,7 @@ export const Button = styled.button`
   }
   @media (min-width: 768px) {
     left: auto;
-    right: 20px;
+    right: 10px;
     top: 10%;
   }
 `;

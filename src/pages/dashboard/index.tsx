@@ -5,11 +5,9 @@ import { Redirect } from "react-router";
 import MenuBottom from "../../components/menuBottom";
 import Map from "../../components/map";
 import Favorites from "../../components/favorites";
-import { useFavorites } from "../../providers/favorites";
 
 const Dashboard = () => {
   const { token } = useLogin();
-
   return (
     <>
       {token ? (

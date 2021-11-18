@@ -133,7 +133,11 @@ const Map = () => {
         <SearchResults>
           {filteredRestaurants.length > 0 ? (
             filteredRestaurants.map((restaurant) => (
-              <RestaurantCard setRoute={setRoute} restaurant={restaurant} />
+              <RestaurantCard
+                setRoute={setRoute}
+                restaurant={restaurant}
+                panTo={panTo}
+              />
             ))
           ) : (
             <p>Nenhum restaurante encontrado</p>
