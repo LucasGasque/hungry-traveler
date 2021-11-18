@@ -14,12 +14,15 @@ import {
   TypeHour,
 } from "./style";
 import { FaHeart } from "react-icons/fa";
-import { Rating, Stack } from "@mui/material";
+import { Stack } from "@mui/material";
+import Rating from "react-rating";
 import { useRestaurants } from "../../providers/restaurants";
 import { useEffect, useState } from "react";
 import { RestaurantsData, BusinessHoursData } from "../../types";
 import { useScore } from "../../providers/score";
 import CardFood from "../../components/cardFood";
+import emptyStar from "../../assets/img/emptyStar.png";
+import fullStar from "../../assets/img/fullStar.png";
 
 const RestaurantDashboard = () => {
   const { token } = useLogin();
@@ -47,6 +50,8 @@ const RestaurantDashboard = () => {
   const media =
     restaurantScore.reduce((acc, note) => acc + note, 0) /
     restaurantScore.length;
+
+    console.log(media)
 
   return (
     <>
@@ -82,10 +87,15 @@ const RestaurantDashboard = () => {
               <ScoreDiv>
                 <Stack spacing={1}>
                   <Rating
-                    name="simple-controlled"
-                    value={media}
-                    precision={0.1}
-                    readOnly
+                  fractions={2}
+                    placeholderRating={media}
+                    emptySymbol={
+                      <img src={emptyStar} alt="" className="icon" />
+                    }
+                    placeholderSymbol={
+                      <img src={fullStar} alt="" className="icon" />
+                    }
+                    fullSymbol={<img src={fullStar} alt="" className="icon" />}
                   />
                 </Stack>
                 <h3>Dê sua nota</h3>
