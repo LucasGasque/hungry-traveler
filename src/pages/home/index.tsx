@@ -1,4 +1,4 @@
-import { useHistory } from "react-router";
+import { Redirect, useHistory } from "react-router-dom";
 import Map from "../../components/map";
 import {
   Container,
@@ -10,11 +10,16 @@ import {
 import { Button } from "@mui/material";
 import NavBar from "../../components/navBar";
 import MenuBottom from "../../components/menuBottom";
+import { useLogin } from "../../providers/login";
+
 
 const Home = () => {
+  const { token } = useLogin();
   const history = useHistory();
   return (
-    <Container>
+    <>
+      {!token ? (
+         <Container>
       <NavBar />
       <Title><span>Hungry</span> Traveler</Title>
       <PhraseMobile>
@@ -63,6 +68,10 @@ const Home = () => {
       </DivButton>
       <MenuBottom />
     </Container>
+      ) : (
+        <Redirect to="/dashboard" />
+      )}
+    </>
   );
 };
 

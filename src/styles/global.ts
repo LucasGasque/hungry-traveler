@@ -18,6 +18,12 @@ export default createGlobalStyle`
     border: none;
     outline: none;
     }
+
+    html {
+        @media(min-width: 768px) {
+            background-color: var(--gray-20);
+        }
+    }
     
     body{}
 

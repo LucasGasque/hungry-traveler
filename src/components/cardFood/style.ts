@@ -6,16 +6,17 @@ export const Container = styled.div`
   height: 170px;
   font-family: "Inter", sans-serif;
   margin: 10px;
+  border-radius: 8px;
 
   @media (max-width: 320px) {
-    width: 320px;
+    width: 276px;
   }
 `;
 
 export const Image = styled.img`
   width: 100%;
   height: 170px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 8px;
 `;
 
 export const Figure = styled.div`
@@ -29,7 +30,7 @@ export const Figure = styled.div`
   );
   z-index: 20;
   position: absolute;
-  border-radius: 0 5px 5px 0;
+  border-radius: 8px;
   top: 0;
 `;
 
@@ -37,7 +38,9 @@ export const Name = styled.span`
   position: absolute;
   color: var(--gray-0);
   font-size: 23px;
+  width: 150px;
   z-index: 21;
+  width: 150px;
   font-weight: bolder;
   left: 5%;
   top: 10%;

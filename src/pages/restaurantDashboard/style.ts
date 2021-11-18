@@ -11,12 +11,10 @@ export const Container = styled.div`
 
 export const Image = styled.div`
   width: 100%;
-  height: 40vh;
+  height: 260px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  -webkit-text-stroke-width: 0.5px;
-  -webkit-text-stroke-color: #000;
 
   h1 {
     color: var(--gray-0);
@@ -26,6 +24,7 @@ export const Image = styled.div`
 
   @media (min-width: 768px) {
     align-items: center;
+    height: 310px;
 
     h1 {
       width: 90%;
@@ -38,14 +37,14 @@ export const Image = styled.div`
 export const PositionDiv = styled.div`
   width: 100%;
   position: absolute;
-  top: 30vh;
+  top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-bottom: 60px;
 
   @media (min-width: 768px) {
-    top: 40vh;
+    top: 240px;
     padding-bottom: 0;
   }
 `;
@@ -137,6 +136,6 @@ export const Menu = styled.div`
   background-color: var(--gray-20);
 
   @media (min-width: 768px) {
-    max-width: 900px;
+    padding: 0 40px;
   }
 `;
