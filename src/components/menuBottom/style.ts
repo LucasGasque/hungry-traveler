@@ -5,7 +5,7 @@ export interface ContProps {
 }
 
 export const Footer = styled.footer`
-  background: rgba(51, 51, 51, 0.9);
+  background: var(--black-95);
   width: 100%;
   height: 68px;
   display: flex;
@@ -28,7 +28,7 @@ export const ButtonsDiv = styled.div<ContProps>`
     width: 108px;
     height: 42px;
     border-radius: 8px;
-    background: var(--gray-20);
+    background: var(--white-50);
     color: var(--gray-50);
     display: flex;
     align-items: center;

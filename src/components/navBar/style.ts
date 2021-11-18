@@ -5,7 +5,7 @@ export interface ContProps {
 }
 
 export const Header = styled.header`
-  background: rgba(51, 51, 51, 0.9);
+  background: var(--black-95);
   width: 100%;
   height: 68px;
   display: none;
@@ -14,6 +14,11 @@ export const Header = styled.header`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top:0;
+    left:0;
+    right: 0;
+    z-index: 10;
   }
 `;
 
@@ -26,7 +31,7 @@ export const ButtonsDiv = styled.div<ContProps>`
     width: 108px;
     height: 42px;
     border-radius: 8px;
-    background: var(--gray-20);
+    background: var(--white-50);
     color: var(--gray-50);
     margin-left: 1rem;
     display: flex;
