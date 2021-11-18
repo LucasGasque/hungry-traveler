@@ -5,13 +5,15 @@ export const Container = styled.div`
   width: 328px;
   height: 170px;
   font-family: "Inter", sans-serif;
+  margin: 10px;
 
   @media (max-width: 320px) {
-      width: 320px;
+    width: 320px;
   }
 `;
 
 export const Image = styled.img`
+  width: 100%;
   height: 170px;
   border-radius: 5px 0 0 5px;
 `;

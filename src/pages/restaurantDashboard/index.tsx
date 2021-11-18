@@ -8,6 +8,7 @@ import {
   HeaderDiv,
   Image,
   Menu,
+  PositionDiv,
   RestaurantInfo,
   ScoreDiv,
   TypeHour,
@@ -18,6 +19,7 @@ import { useRestaurants } from "../../providers/restaurants";
 import { useEffect, useState } from "react";
 import { RestaurantsData, BusinessHoursData } from "../../types";
 import { useScore } from "../../providers/score";
+import CardFood from "../../components/cardFood";
 
 const RestaurantDashboard = () => {
   const { token } = useLogin();
@@ -63,37 +65,45 @@ const RestaurantDashboard = () => {
             </HeaderDiv>
             <h1>{restaurante.name}</h1>
           </Image>
-          <RestaurantInfo>
-            <h1>Descrição</h1>
-            <Description>{restaurante.description}</Description>
-            <TypeHour>
-              <h3>{restaurante.type}</h3>
-              <h3>
-                19:00 às 21:00
-                {/* {restaurante.businessHours.open}:00h às{" "}
-                {restaurante.businessHours.close}:00h */}
-              </h3>
-            </TypeHour>
-            <ScoreDiv>
-              <Stack spacing={1}>
-                <Rating
-                  name="simple-controlled"
-                  value={media}
-                  precision={0.5}
-                  readOnly
-                />
-              </Stack>
-              <h3>Dê sua nota</h3>
-            </ScoreDiv>
-          </RestaurantInfo>
-          <Menu>
-            {/* {restaurante.menu.map((dish) => (
-              <CardFood name={dish.name}
-               price={dish.price}
-               img={dish.img}
-               description={dish.description}/>
-            ))} */}
-          </Menu>
+          <PositionDiv>
+            <RestaurantInfo>
+              <h1>Descrição</h1>
+              <Description>{restaurante.description}</Description>
+              <TypeHour>
+                <h3>{restaurante.type}</h3>
+                <h3>
+                  {/* 19:00 às 21:00 */}
+                  {restaurante.businessHours && restaurante.businessHours.open}
+                  :00h às{" "}
+                  {restaurante.businessHours && restaurante.businessHours.close}
+                  :00h
+                </h3>
+              </TypeHour>
+              <ScoreDiv>
+                <Stack spacing={1}>
+                  <Rating
+                    name="simple-controlled"
+                    value={media}
+                    precision={0.1}
+                    readOnly
+                  />
+                </Stack>
+                <h3>Dê sua nota</h3>
+              </ScoreDiv>
+            </RestaurantInfo>
+            <Menu>
+              {restaurante.menu &&
+                restaurante.menu.map((dish, index) => (
+                  <CardFood
+                    key={index}
+                    name={dish.name}
+                    price={dish.price}
+                    img={dish.img}
+                    description={dish.description}
+                  />
+                ))}
+            </Menu>
+          </PositionDiv>
           <MenuBottom />
         </Container>
       ) : (
