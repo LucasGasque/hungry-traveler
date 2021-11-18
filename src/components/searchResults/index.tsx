@@ -6,6 +6,8 @@ interface SearchResultsData {
 }
 
 const SearchResults = ({ children }: SearchResultsData) => {
+  
+
   return (
     <Container>
       <div>

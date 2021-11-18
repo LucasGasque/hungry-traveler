@@ -33,7 +33,7 @@ const Favorites = () => {
         </Header>
         <Box>
           {userFavorites.map((favorite) => (
-            <RestaurantCard restaurant={favorite} />
+            <RestaurantCard key={favorite.id} restaurant={favorite} />
           ))}
         </Box>
       </Container>

@@ -30,7 +30,7 @@ export const FavoritesProvider = ({ children }: FavoritesProps) => {
   const { userId, token } = useLogin();
   const [favorites, setFavorites] = useState([]);
   const [showFavorites, setShowFavorites] = useState(false);
-  const handleFavorites = () => setShowFavorites(!showFavorites)
+  const handleFavorites = () => setShowFavorites(!showFavorites);
 
   const getFavorites = () => {
     api
@@ -84,7 +84,7 @@ export const FavoritesProvider = ({ children }: FavoritesProps) => {
       });
   };
 
-  useEffect(() => getFavorites(), []);
+  useEffect(() => getFavorites(),[]);
 
   return (
     <FavoritesContext.Provider

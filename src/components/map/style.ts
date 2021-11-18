@@ -5,6 +5,6 @@ export const Container = styled.div`
   height: calc(100vh - 136px);
 
   @media (min-width: 768px) {
-    height: calc(100vh - 68px);
+    min-height: 100vh;
   }
 `;
