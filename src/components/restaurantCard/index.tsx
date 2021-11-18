@@ -60,8 +60,6 @@ const RestaurantCard = ({
     setFavorite(favorites.filter((a) => a.restaurantId === restaurant.id)[0]);
   }, [favorites]);
 
-  console.log(favorites);
-
   return (
     <Container onClick={() => panTo(restaurant.location)}>
       <MainContent>
@@ -82,7 +80,9 @@ const RestaurantCard = ({
             </p>
           </div>
           <Heart isFavorite={isFavorite}>
-            <FaHeart onClick={() => handleFavorite(restaurant.id)} />
+            <button>
+              <FaHeart onClick={() => handleFavorite(restaurant.id)} />
+            </button>
             <ArrowDiv onClick={handleVisibility} isVisible={isVisible}>
               <IoIosArrowDown />
             </ArrowDiv>
