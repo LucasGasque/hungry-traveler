@@ -18,6 +18,8 @@ const Register = () => {
     formState: { errors },
   } = useForm<UserData>({ resolver: yupResolver(schema) });
   const history = useHistory();
+
+
   return (
     <>
       {!token ? (
@@ -73,9 +75,8 @@ const Register = () => {
               sx={{
                 width: "100%",
                 maxWidth: "340px",
-                height: "45px",
+                height: "max-content",
                 borderRadius: "8px",
-                marginBottom: "20px",
               }}
               type="password"
               label="Senha"

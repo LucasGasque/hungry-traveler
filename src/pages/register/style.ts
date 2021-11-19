@@ -67,7 +67,7 @@ export const Title = styled.h1`
 export const FormTitle = styled.h1`
   color: #ffffff;
   font-family: "Righteous", cursive;
-  margin-top: 1rem;
+  margin: 1rem 0 0.25rem 0;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -76,7 +76,7 @@ export const FormTitle = styled.h1`
 export const Form = styled.form`
   max-width: 464px;
   width: 95%;
-  height: 600px;
+  height: 620px;
   display: flex;
   flex-direction: column;
   align-items: center;

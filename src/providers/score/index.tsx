@@ -35,8 +35,6 @@ export const ScoreProvider = ({ children }: ScoreProps) => {
       });
   };
 
-  console.log(scores);
-
   const deleteScore = async (id: number) => {
     await api
       .delete(`/score/${id}`, {
