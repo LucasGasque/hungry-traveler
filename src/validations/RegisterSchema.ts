@@ -12,10 +12,7 @@ export const schema = yup.object().shape({
   password: yup
     .string()
     .required("Campo obrigatório")
-    .matches(
-      regex,
-      "Deve conter pelo menos uma letra maiúscula, minúscula e um número e no mínimo 6 dígitos"
-    ),
+    .matches(regex, "1 maiúscula, 1 minúscula, 1 número; mínimo 6 digitos"),
   passwordConfirm: yup
     .string()
     .required("Campo Obrigatório")
