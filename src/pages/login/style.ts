@@ -13,6 +13,7 @@ export const Container = styled.div`
     url(${travelerS});
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-x: center;
   color: var(--gray-0);
   display: flex;
   justify-content: center;

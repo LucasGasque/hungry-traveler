@@ -24,14 +24,26 @@ import { useScore } from "../../providers/score";
 import CardFood from "../../components/cardFood";
 
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+import { useFavorites } from "../../providers/favorites";
+import Favorites from "../../components/favorites";
 
 const RestaurantDashboard = () => {
   const { token } = useLogin();
   const { restaurants } = useRestaurants();
+  const { favorites, addFavorites, removeFavorites } = useFavorites();
   const { scores, addScore } = useScore();
   const params = useParams() as any;
+
   const [restaurante, setRestaurante] = useState<RestaurantsData>(
     {} as RestaurantsData
+  );
+
+  const [isFavorite, setIsFavorite] = useState(
+    favorites.map((a) => a.restaurantId).includes(restaurante.id)
+  );
+
+  const [favorite, setFavorite] = useState(
+    favorites.filter((a) => a.restaurantId === restaurante.id)[0]
   );
 
   useEffect(
@@ -44,6 +56,24 @@ const RestaurantDashboard = () => {
     [restaurants]
   );
 
+  useEffect(() => {
+    setIsFavorite(
+      favorites.map((a) => a.restaurantId).includes(restaurante.id)
+    );
+  }, [favorites]);
+
+  useEffect(() => {
+    setFavorite(favorites.filter((a) => a.restaurantId === restaurante.id)[0]);
+  }, [favorites]);
+
+  const handleFavorite = (id: number) => {
+    if (isFavorite) {
+      removeFavorites(favorite.id);
+    } else {
+      addFavorites(id);
+    }
+  };
+
   const restaurantScore = scores
     .filter((score) => score.restaurantId.toString() === params.id)
     .map((rest) => rest.score);
@@ -51,6 +81,8 @@ const RestaurantDashboard = () => {
   const media =
     restaurantScore.reduce((acc, note) => acc + note, 0) /
     restaurantScore.length;
+
+  console.log(isFavorite);
 
   return (
     <>
@@ -64,9 +96,15 @@ const RestaurantDashboard = () => {
               backgroundPosition: "center",
             }}
           >
-            <HeaderDiv>
+            <HeaderDiv isFavorite={isFavorite}>
               <h3>Restaurante</h3>
-              <FaHeart />
+
+              <FaHeart
+                onClick={(evt) => {
+                  handleFavorite(restaurante.id);
+                  evt.stopPropagation();
+                }}
+              />
             </HeaderDiv>
             <h1>{restaurante.name}</h1>
           </Image>
@@ -123,6 +161,7 @@ const RestaurantDashboard = () => {
             </PositionDiv>
           </Content>
           <MenuBottom />
+          <Favorites />
         </Container>
       ) : (
         <Redirect to="/login" />

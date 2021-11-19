@@ -13,6 +13,7 @@ export const Container = styled.div`
     url(${travelerS});
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-x: center;
   color: var(--gray-0);
   display: flex;
   justify-content: center;
@@ -39,6 +40,8 @@ export const Container = styled.div`
   }
 
   @media (min-width: 768px) {
+    padding-top: 50px;
+    padding-bottom: 0;
     justify-content: space-between;
     background-image: linear-gradient(
         270.31deg,
