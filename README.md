@@ -48,16 +48,12 @@ Projeto desenvolvido como Capstone do **Q2** do curso desenvolvido pela [Kenzie 
 
 ## 🎨 Layout
 
-O layout da aplicação está disponível no Figma:
-
-<a href="https://www.figma.com/file/YvV5NlmCTEXGUUM4IlJbcF/Grupo-1---Capstone-Q2?node-id=483%3A597">
-  <img alt="Made by team Hungry Traveler" src="https://www.figma.com/file/YvV5NlmCTEXGUUM4IlJbcF/Grupo-1---Capstone-Q2?node-id=483%3A597">
-</a>
+O layout da aplicação está disponível no [Figma](https://www.figma.com/file/YvV5NlmCTEXGUUM4IlJbcF/Grupo-1---Capstone-Q2?node-id=483%3A597).
 
 ### Mobile
 
 <p align="center">
-  <img alt="HungryTraveler" title="#HungryTraveler" src="./assets/img/mobile1.png" width="200px">
+  <img alt="HungryTraveler" title="#HungryTraveler" src="./src/assets/img/mobile1.png" width="200px">
 
   <img alt="HungryTraveler" title="#HungryTraveler" src="./assets/img/mobile2.png" width="200px">
 </p>
