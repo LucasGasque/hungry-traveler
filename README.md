@@ -24,6 +24,7 @@
       - [**Website** (React + [TypeScript](https://www.typescriptlang.org/))](#website-react--typescript)
       - [**Utilitários**](#utilitários)
   - [👨‍💻 Contribuidores](#-contribuidores)
+  - [🦸 Autor](#-autor)
   <!--te-->
 
 ## 💻 Sobre o projeto
@@ -104,5 +105,9 @@ As seguintes ferramentas foram usadas na construção do projeto:
     <td align="center"><a href="https://www.linkedin.com/in/tulio-goulart-pereira/"><img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4E03AQE_TAWbeiGkCA/profile-displayphoto-shrink_800_800/0/1615295437872?e=1642636800&v=beta&t=4SefvC8i8Yow8duigzuR7tX0t5keWEb_opSVt_YIzFk" width="100px;" alt=""/><br /><sub><b>Tulio Goulart</b></sub></a><br /><a href="https://www.linkedin.com/in/tulio-goulart-pereira//" title="Linkedin">🔗</a></td>
   </tr>
 </table>
+
+## 🦸 Autor
+
+💜 Team Hungry Traveler 👏
 
 ---
