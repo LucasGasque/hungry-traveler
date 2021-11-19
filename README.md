@@ -55,15 +55,15 @@ O layout da aplicação está disponível no [Figma](https://www.figma.com/file/
 <p align="center">
   <img alt="HungryTraveler" title="#HungryTraveler" src="./src/assets/img/mobile1.png" width="200px">
 
-  <img alt="HungryTraveler" title="#HungryTraveler" src="./assets/img/mobile2.png" width="200px">
+  <img alt="HungryTraveler" title="#HungryTraveler" src="./src/assets/img/mobile2.png" width="200px">
 </p>
 
 ### Desktop
 
 <p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="HungryTraveler" title="#HungryTraveler" src="./assets/img/desktop1.png" width="400px">
+  <img alt="HungryTraveler" title="#HungryTraveler" src="./src/assets/img/desktop1.png" width="400px">
 
-  <img alt="HungryTraveler" title="#HungryTraveler" src="./assets/img/desktop2.png" width="400px">
+  <img alt="HungryTraveler" title="#HungryTraveler" src="./src/assets/img/desktop2.png" width="400px">
 </p>
 
 ---
