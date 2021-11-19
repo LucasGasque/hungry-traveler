@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface HeaderDivData {
+  isFavorite: boolean;
+}
+
 export const Container = styled.div`
   width: 100%;
   display: flex;
@@ -69,7 +73,7 @@ export const Content = styled.div`
   background-color: #ffffff;
 `;
 
-export const HeaderDiv = styled.div`
+export const HeaderDiv = styled.div<HeaderDivData>`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -82,6 +86,9 @@ export const HeaderDiv = styled.div`
     color: var(--primary);
     width: 25px;
     height: 25px;
+  }
+  > :last-child {
+    color: ${(props) => (props.isFavorite ? "#EB2A44" : "#828282")};
   }
 
   @media (min-width: 768px) {

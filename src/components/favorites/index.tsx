@@ -34,7 +34,11 @@ const Favorites = () => {
         <Box>
           {userFavorites.length ? (
             userFavorites.map((favorite) => (
-              <RestaurantCard key={favorite.id} restaurant={favorite} />
+              <RestaurantCard
+                type={"favorite"}
+                key={favorite.id}
+                restaurant={favorite}
+              />
             ))
           ) : (
             <Text>Você ainda não tem restaurantes favoritos</Text>

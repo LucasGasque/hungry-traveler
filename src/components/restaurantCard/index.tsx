@@ -22,12 +22,14 @@ interface Restaurant {
   restaurant: RestaurantsData;
   setRoute?: (location: LocationData) => void;
   panTo?: (location: LocationData) => void;
+  type?: string;
 }
 
 const RestaurantCard = ({
   restaurant,
   setRoute,
   panTo = () => null,
+  type,
 }: Restaurant) => {
   const history = useHistory();
   const [isVisible, setIsVisible] = useState(false);
@@ -110,39 +112,59 @@ const RestaurantCard = ({
           <h3>Descrição</h3>
           <p>{restaurant.description}</p>
           <div>
-            <Button
-              color="primary"
-              variant="contained"
-              sx={{
-                width: "45%",
-                height: "45px",
-                padding: "0",
-                textTransform: "none",
-                fontFamily: "Righteous, cursive",
-                borderRadius: "8px",
-              }}
-              onClick={() => history.push(`/restaurant/${restaurant.id}`)}
-            >
-              Ir para página
-            </Button>
+            {type === "favorite" ? (
+              <Button
+                color="primary"
+                variant="contained"
+                sx={{
+                  width: "100%",
+                  height: "45px",
+                  padding: "0",
+                  textTransform: "none",
+                  fontFamily: "Righteous, cursive",
+                  borderRadius: "8px",
+                }}
+                onClick={() => history.push(`/restaurant/${restaurant.id}`)}
+              >
+                Ir para página
+              </Button>
+            ) : (
+              <>
+                <Button
+                  color="primary"
+                  variant="contained"
+                  sx={{
+                    width: "45%",
+                    height: "45px",
+                    padding: "0",
+                    textTransform: "none",
+                    fontFamily: "Righteous, cursive",
+                    borderRadius: "8px",
+                  }}
+                  onClick={() => history.push(`/restaurant/${restaurant.id}`)}
+                >
+                  Ir para página
+                </Button>
 
-            <Button
-              color="secondary"
-              variant="contained"
-              sx={{
-                width: "45%",
-                height: "45px",
-                padding: "0",
-                textTransform: "none",
-                fontFamily: "Righteous, cursive",
-                borderRadius: "8px",
-              }}
-              onClick={
-                setRoute ? () => setRoute(restaurant.location) : () => ""
-              }
-            >
-              Traçar rota
-            </Button>
+                <Button
+                  color="secondary"
+                  variant="contained"
+                  sx={{
+                    width: "45%",
+                    height: "45px",
+                    padding: "0",
+                    textTransform: "none",
+                    fontFamily: "Righteous, cursive",
+                    borderRadius: "8px",
+                  }}
+                  onClick={
+                    setRoute ? () => setRoute(restaurant.location) : () => ""
+                  }
+                >
+                  Traçar rota
+                </Button>
+              </>
+            )}
           </div>
         </Details>
       )}
