@@ -76,6 +76,7 @@ const Register = () => {
               sx={{
                 width: "100%",
                 maxWidth: "340px",
+                height: "45px",
                 borderRadius: "8px",
                 marginBottom: "20px",
               }}
