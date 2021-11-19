@@ -1,46 +1,124 @@
-# Getting Started with Create React App
+<h1 align="center">
+    🍽️ <a href="#" alt="hungry traveler"> Hungry Traveler </a>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h3 align="center">
+  🌎 Todos os seus restaurantes favoritos ao redor do mundo em um só lugar! 📱💻
+</h3>
 
-## Available Scripts
+<h4 align="center">
+	🚧   Concluído 🚀 🚧
+</h4>
 
-In the project directory, you can run:
+# Tabela de conteúdos
 
-### `yarn start`
+<!--ts-->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Tabela de conteúdos](#tabela-de-conteúdos)
+  - [💻 Sobre o projeto](#-sobre-o-projeto)
+  - [⚙️ Funcionalidades](#️-funcionalidades)
+  - [🎨 Layout](#-layout)
+    - [Mobile](#mobile)
+    - [Desktop](#desktop)
+  - [🛠 Tecnologias](#-tecnologias)
+      - [**Website** (React + [TypeScript](https://www.typescriptlang.org/))](#website-react--typescript)
+      - [**Utilitários**](#utilitários)
+  - [👨‍💻 Contribuidores](#-contribuidores)
+  - [🦸 Autor](#-autor)
+  <!--te-->
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 💻 Sobre o projeto
 
-### `yarn test`
+🍽️ Hungry Traveler - é uma forma de auxiliar o usuário a se conectar com a gastronomia de um local através de vários restaurantes, conhecendo um pouco mais sobre a história dele e de seus pratos, podendo assim escolher quais restaurantes ele irá visitar, os salvando numa lista de favoritos, e também deixando comentários e uma nota para os restaurantes já visitados, auxiliando assim os outros usuários a escolher os restaurantes que deseja visitar.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Projeto desenvolvido como Capstone do **Q2** do curso desenvolvido pela [Kenzie Academy Brasil](https://kenzie.com.br/v2/).
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## ⚙️ Funcionalidades
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [x] Os usuários podem se cadastrar na plataforma, onde podem:
+  - [x] navegar pelo mapa para ver os restaurantes cadastradas
+  - [x] adicionar um restaurante aos seus favoritos
+  - [x] entrar na página de um determinado restaurante
+  - [x] avaliar um restaurante
+  - [x] ver a nota média de um restaurante
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `yarn eject`
+## 🎨 Layout
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+O layout da aplicação está disponível no Figma:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<a href="https://www.figma.com/file/YvV5NlmCTEXGUUM4IlJbcF/Grupo-1---Capstone-Q2?node-id=483%3A597">
+  <img alt="Made by team Hungry Traveler" src="https://www.figma.com/file/YvV5NlmCTEXGUUM4IlJbcF/Grupo-1---Capstone-Q2?node-id=483%3A597">
+</a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Mobile
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<p align="center">
+  <img alt="HungryTraveler" title="#HungryTraveler" src="./assets/img/mobile1.png" width="200px">
 
-## Learn More
+  <img alt="HungryTraveler" title="#HungryTraveler" src="./assets/img/mobile2.png" width="200px">
+</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Desktop
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
+  <img alt="HungryTraveler" title="#HungryTraveler" src="./assets/img/desktop1.png" width="400px">
+
+  <img alt="HungryTraveler" title="#HungryTraveler" src="./assets/img/desktop2.png" width="400px">
+</p>
+
+---
+
+## 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+#### **Website** ([React](https://reactjs.org/) + [TypeScript](https://www.typescriptlang.org/))
+
+- **[React Router Dom](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-dom)**
+- **[React Hook Form & YUP](https://react-hook-form.com/get-started)**
+- **[Axios](https://github.com/axios/axios)**
+- **[React Toastify](https://www.npmjs.com/package/react-toastify)**
+- **[Styled Components](https://react-leaflet.js.org/)**
+- **[MUI Components](https://mui.com/pt/)**
+- **[React Icons](https://react-icons.github.io/react-icons/)**
+
+#### [](https://github.com/tgmarinho/Ecoleta#utilit%C3%A1rios)**Utilitários**
+
+- Protótipo: **[Figma](https://www.figma.com/)** → **[Protótipo (Ecoleta)](https://www.figma.com/file/YvV5NlmCTEXGUUM4IlJbcF/Grupo-1---Capstone-Q2?node-id=2%3A3)**
+- API: **[JSON API](https://github.com/hericfelix/hungry-traveler-server)** → **[API Google Maps](https://developers.google.com/maps)**
+- Editor: **[Visual Studio Code](https://code.visualstudio.com/)** → Extensions: **[SQLite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)**
+- Commit Conventional: **[Commitlint](https://github.com/conventional-changelog/commitlint)**
+- Teste de API: **[Insomnia](https://insomnia.rest/)**
+- Ícones: **[React Icons](https://react-icons.github.io/react-icons/)**
+
+---
+
+## 👨‍💻 Contribuidores
+
+💜 Team Hungry Traveler 👏👏👏👏
+
+<table>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/hericfelix/"><img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4D03AQE18My2qyNoYA/profile-displayphoto-shrink_800_800/0/1581458923632?e=1642636800&v=beta&t=hF0uZYOSWmoF0viHSTjxKNkX0Au9DKwQ10BUNNo4zoY" width="100px;" alt=""/><br /><sub><b>Heric Félix</b></sub></a><br /><a href="https://www.linkedin.com/in/hericfelix/" title="Linkedin">🔗</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/lucasgasque/"><img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4E03AQGdkGLRaUByrg/profile-displayphoto-shrink_100_100/0/1622568508827?e=1642032000&v=beta&t=C9USdYUEl1zmButIsWozM1geRB5E8wxNkdb6wUj51As" width="100px;" alt=""/><br /><sub><b>Lucas Gasque</b></sub></a><br /><a href="https://www.linkedin.com/in/lucasgasque/" title="Linkedin">🔗</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/pedro-kopsch/"><img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4D03AQG7cvcVrGxyxg/profile-displayphoto-shrink_800_800/0/1633300245221?e=1642636800&v=beta&t=u2cRjmJnJSmb16sgUx-nd3B43UaIoamAd9mSlQKK07Y" width="100px;" alt=""/><br /><sub><b>Pedro Kopsch</b></sub></a><br /><a href="https://www.linkedin.com/in/pedro-kopsch//" title="Linkedin">🔗</a></td>
+    <td align="center"><a href="https://www.linkedin.com/in/tulio-goulart-pereira/"><img style="border-radius: 50%;" src="https://media-exp1.licdn.com/dms/image/C4E03AQE_TAWbeiGkCA/profile-displayphoto-shrink_800_800/0/1615295437872?e=1642636800&v=beta&t=4SefvC8i8Yow8duigzuR7tX0t5keWEb_opSVt_YIzFk" width="100px;" alt=""/><br /><sub><b>Tulio Goulart</b></sub></a><br /><a href="https://www.linkedin.com/in/tulio-goulart-pereira//" title="Linkedin">🔗</a></td>
+  </tr>
+</table>
+
+## 🦸 Autor
+
+<a href="https://blog.rocketseat.com.br/author/thiago/">
+ <img style="border-radius: 50%;" src="https://avatars3.githubusercontent.com/u/380327?s=460&u=61b426b901b8fe02e12019b1fdb67bf0072d4f00&v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Thiago Marinho</b></sub></a> <a href="https://blog.rocketseat.com.br/author/thiago/" title="Rocketseat">🚀</a>
+ <br />
+
+[![Twitter Badge](https://img.shields.io/badge/-@tgmarinho-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/tgmarinho)](https://twitter.com/tgmarinho) [![Linkedin Badge](https://img.shields.io/badge/-Thiago-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/tgmarinho/)](https://www.linkedin.com/in/tgmarinho/)
+[![Gmail Badge](https://img.shields.io/badge/-tgmarinho@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:tgmarinho@gmail.com)](mailto:tgmarinho@gmail.com)
+
+---
